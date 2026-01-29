@@ -1,60 +1,396 @@
-```
-JavaScript
-├─ part.1 Essential Syntax Of JS
-│  ├─ chr.1 Annotation
-│  ├─ chr.2 KeyWords & Data Define
-│  ├─ chr.3 Data Type
-│  ├─ chr.4 Operation & Experssion
-│  ├─ chr.5 Program Processing
-│  ├─ chr.6 Function
-│  ├─ chr.7 Class & Object
-│  └─ chr.8 Debugging & Error Handling
-│     ├─ section.1 console print.md
-│     ├─ section.2 debugger keyword.md
-│     └─ section.3 trycatch.md
-├─ part.2 Standard Built-in Objects
-│  ├─ chr.1 Primitive Wrapper & Basics
-│  │  ├─ section.1 Boolean.md
-│  │  ├─ section.2 Number.md
-│  │  ├─ section.3 String.md
-│  │  └─ section.4 Symbol.md
-│  ├─ chr.2 Collection & Data Structure
-│  │  ├─ section.1 Array.md
-│  │  ├─ section.2 Array Bufffer & TypedArray.md
-│  │  ├─ section.3 Map & WeakMap.md
-│  │  ├─ section.4 Set & WeakSet.md
-│  │  └─ section.5 Iterator.md
-│  ├─ chr.3 Utility Object
-│  │  ├─ section.1 Math.md
-│  │  ├─ section.2 Date.md
-│  │  ├─ section.3 RegExp.md
-│  │  ├─ section.4 Json.md
-│  │  ├─ section.5 globalThis.md
-│  │  ├─ section.6 Object.md
-│  │  └─ section.7 Function.md
-│  ├─ chr.4 Special Object
-│  │  ├─ section.1 Reflect.md
-│  │  └─ section.2 Proxy.md
-│  └─ chr.5 Error Object
-│     └─ section.1 Error.md
-├─ part.3 Asynchronous Programming
-├─ part.4 Browser Environment
-├─ part.5 Server Environment
-├─ part.6 Modern JavaScript Features
-├─ part.7 TypeScript
-├─ part.8 Programming Paradigms
-│  ├─ chr.1 OOP
-│  └─ chr.2 FP
-├─ part.9 Projection
-│  ├─ chr.1 Modularity and Tools
-│  ├─ chr.2 Testing
-│  └─ chr.3 Performance and Security
-├─ README.md
-├─ [Appendex.1] Domain
-│  ├─ 1 RealTime Video Stream in BS
-│  └─ 2 Data Visulization
-└─ [Appendex.2] Temp
-   ├─ Temp 1.md
-   └─ Temp 2.md
-
+```bash
+JavaScript 全栈知识体系
+├─ 阶段1：JavaScript 语言核心
+│  ├─ 模块1：语法基础
+│  │  ├─ 1.1 基础语法与运行环境
+│  │  │  ├─ 注释与调试
+│  │  │  ├─ 变量声明 (var/let/const)
+│  │  │  ├─ 数据类型与类型转换
+│  │  │  └─ 运算符与表达式
+│  │  ├─ 1.2 流程控制
+│  │  │  ├─ 条件语句
+│  │  │  ├─ 循环语句
+│  │  │  └─ 流程控制语句
+│  │  └─ 1.3 错误处理
+│  │     ├─ try-catch-finally
+│  │     ├─ Error对象类型
+│  │     └─ 错误处理策略
+│  ├─ 模块2：函数与作用域
+│  │  ├─ 2.1 函数基础
+│  │  │  ├─ 函数定义与调用
+│  │  │  ├─ 参数传递与返回值
+│  │  │  └─ 函数表达式与声明
+│  │  ├─ 2.2 作用域与闭包
+│  │  │  ├─ 词法作用域
+│  │  │  ├─ 闭包原理与应用
+│  │  │  └─ this绑定规则
+│  │  └─ 2.3 高级函数
+│  │     ├─ 高阶函数
+│  │     ├─ 箭头函数
+│  │     └─ 函数柯里化
+│  ├─ 模块3：面向对象编程
+│  │  ├─ 3.1 原型与继承
+│  │  │  ├─ 原型链机制
+│  │  │  ├─ 构造函数与new
+│  │  │  └─ 继承实现方式
+│  │  ├─ 3.2 类与对象
+│  │  │  ├─ ES6 Class语法
+│  │  │  ├─ 类属性与方法
+│  │  │  └─ 静态方法与属性
+│  │  └─ 3.3 设计模式
+│  │     ├─ 工厂模式
+│  │     ├─ 单例模式
+│  │     └─ 观察者模式
+│  ├─ 模块4：TypeScript 类型系统
+│  │  ├─ 4.1 类型基础
+│  │  │  ├─ 基本类型与类型注解
+│  │  │  ├─ 接口与类型别名
+│  │  │  └─ 泛型基础
+│  │  ├─ 4.2 高级类型
+│  │  │  ├─ 联合类型与交叉类型
+│  │  │  ├─ 类型守卫与断言
+│  │  │  └─ 映射类型与条件类型
+│  │  └─ 4.3 类型工具
+│  │     ├─ tsconfig配置
+│  │     ├─ 类型声明文件
+│  │     └─ TypeScript工具类型
+│  └─ 模块5：现代JavaScript特性
+│     ├─ 5.1 ES6+ 核心特性
+│     │  ├─ 解构赋值
+│     │  ├─ 模板字符串
+│     │  ├─ 扩展运算符
+│     │  └─ 可选链与空值合并
+│     ├─ 5.2 迭代器与生成器
+│     │  ├─ 可迭代协议
+│     │  ├─ 迭代器协议
+│     │  └─ 生成器函数
+│     └─ 5.3 元编程
+│        ├─ Symbol类型
+│        ├─ Reflect API
+│        └─ Proxy API
+├─ 阶段2：内置对象与API
+│  ├─ 模块6：基础内置对象
+│  │  ├─ 6.1 原始类型包装器
+│  │  │  ├─ String对象
+│  │  │  ├─ Number对象
+│  │  │  ├─ Boolean对象
+│  │  │  └─ Symbol对象
+│  │  ├─ 6.2 实用对象
+│  │  │  ├─ Math对象
+│  │  │  ├─ Date对象
+│  │  │  └─ RegExp对象
+│  │  └─ 6.3 JSON与全局对象
+│  │     ├─ JSON序列化与解析
+│  │     ├─ globalThis对象
+│  │     └─ 对象原型方法
+│  ├─ 模块7：数据结构
+│  │  ├─ 7.1 数组与类数组
+│  │  │  ├─ Array对象
+│  │  │  ├─ TypedArray
+│  │  │  ├─ ArrayBuffer
+│  │  │  └─ 类数组转换
+│  │  ├─ 7.2 集合类型
+│  │  │  ├─ Set与WeakSet
+│  │  │  ├─ Map与WeakMap
+│  │  │  └─ 数据结构比较
+│  │  └─ 7.3 迭代与遍历
+│  │     ├─ 迭代器方法
+│  │     ├─ for...of循环
+│  │     └─ 遍历器方法
+│  └─ 模块8：异步编程体系
+│     ├─ 8.1 异步基础
+│     │  ├─ 事件循环机制
+│     │  ├─ 回调函数模式
+│     │  └─ 异步错误处理
+│     ├─ 8.2 Promise体系
+│     │  ├─ Promise基础
+│     │  ├─ Promise链式调用
+│     │  ├─ Promise静态方法
+│     │  └─ Promise错误处理
+│     └─ 8.3 async/await
+│        ├─ async函数语法
+│        ├─ await表达式
+│        └─ 异步迭代器
+├─ 阶段3：浏览器端开发
+│  ├─ 模块9：浏览器API基础
+│  │  ├─ 9.1 DOM操作
+│  │  │  ├─ DOM节点操作
+│  │  │  ├─ DOM事件系统
+│  │  │  ├─ DOM遍历与查询
+│  │  │  └─ 表单操作
+│  │  ├─ 9.2 BOM对象
+│  │  │  ├─ Window对象
+│  │  │  ├─ Location对象
+│  │  │  ├─ History对象
+│  │  │  └─ Navigator对象
+│  │  └─ 9.3 浏览器存储
+│  │     ├─ Cookie操作
+│  │     ├─ Web Storage
+│  │     ├─ IndexedDB
+│  │     └─ 客户端数据库
+│  ├─ 模块10：前端框架基础
+│  │  ├─ 10.1 React基础
+│  │  │  ├─ JSX语法
+│  │  │  ├─ 组件与Props
+│  │  │  ├─ 状态与生命周期
+│  │  │  └─ Hooks系统
+│  │  ├─ 10.2 Vue基础
+│  │  │  ├─ 模板语法
+│  │  │  ├─ 响应式系统
+│  │  │  ├─ 组件系统
+│  │  │  └─ 组合式API
+│  │  └─ 10.3 框架对比与选型
+│  │     ├─ 框架特性对比
+│  │     ├─ 适用场景分析
+│  │     └─ 学习路径建议
+│  ├─ 模块11：状态管理与路由
+│  │  ├─ 11.1 状态管理
+│  │  │  ├─ Redux核心概念
+│  │  │  ├─ Vuex状态管理
+│  │  │  ├─ Context API
+│  │  │  └─ 状态管理方案选型
+│  │  ├─ 11.2 路由管理
+│  │  │  ├─ React Router
+│  │  │  ├─ Vue Router
+│  │  │  └─ 路由原理与实现
+│  │  └─ 11.3 数据流管理
+│  │     ├─ 单向数据流
+│  │     ├─ 双向数据绑定
+│  │     └─ 数据状态同步
+│  └─ 模块12：现代前端特性
+│     ├─ 12.1 组件化开发
+│     │  ├─ 组件设计原则
+│     │  ├─ 组件通信模式
+│     │  └─ 组件复用策略
+│     ├─ 12.2 性能优化
+│     │  ├─ 渲染性能优化
+│     │  ├─ 加载性能优化
+│     │  ├─ 内存管理优化
+│     │  └─ 性能监控工具
+│     └─ 12.3 高级特性
+│        ├─ Web Workers
+│        ├─ Service Worker
+│        ├─ Web Components
+│        └─ 微前端架构
+├─ 阶段4：服务端开发
+│  ├─ 模块13：Node.js核心
+│  │  ├─ 13.1 Node.js基础
+│  │  │  ├─ 模块系统
+│  │  │  ├─ 全局对象
+│  │  │  ├─ 内置模块
+│  │  │  └─ 包管理机制
+│  │  ├─ 13.2 核心模块
+│  │  │  ├─ fs文件系统
+│  │  │  ├─ http/https
+│  │  │  ├─ path与url
+│  │  │  └─ 进程与集群
+│  │  └─ 13.3 异步IO
+│  │     ├─ 事件驱动模型
+│  │     ├─ 流式处理
+│  │     ├─ Buffer对象
+│  │     └─ 文件操作
+│  ├─ 模块14：Web框架
+│  │  ├─ 14.1 Express.js
+│  │  │  ├─ 中间件机制
+│  │  │  ├─ 路由系统
+│  │  │  ├─ 错误处理
+│  │  │  └─ 模板引擎
+│  │  ├─ 14.2 Koa.js
+│  │  │  ├─ 洋葱模型
+│  │  │  ├─ 上下文对象
+│  │  │  └─ 中间件开发
+│  │  └─ 14.3 现代框架
+│  │     ├─ NestJS架构
+│  │     ├─ Fastify性能
+│  │     └─ 框架选型指南
+│  ├─ 模块15：数据库与ORM
+│  │  ├─ 15.1 数据库基础
+│  │  │  ├─ SQL与NoSQL
+│  │  │  ├─ 数据库设计
+│  │  │  └─ 连接池管理
+│  │  ├─ 15.2 ORM框架
+│  │  │  ├─ Sequelize (SQL)
+│  │  │  ├─ TypeORM
+│  │  │  ├─ Mongoose (MongoDB)
+│  │  │  └─ Prisma
+│  │  └─ 15.3 数据访问模式
+│  │     ├─ Repository模式
+│  │     ├─ 数据迁移
+│  │     └─ 事务处理
+│  └─ 模块16：API开发
+│     ├─ 16.1 RESTful API
+│     │  ├─ REST原则
+│     │  ├─ API设计规范
+│     │  ├─ 版本控制策略
+│     │  └─ 接口文档生成
+│     ├─ 16.2 GraphQL
+│     │  ├─ Schema定义
+│     │  ├─ Resolver实现
+│     │  ├─ 查询优化
+│     │  └─ Apollo Server
+│     └─ 16.3 API安全
+│        ├─ 身份认证
+│        ├─ 权限控制
+│        ├─ 数据验证
+│        └─ 安全防护
+├─ 阶段5：工程化与工具链
+│  ├─ 模块17：开发工具
+│  │  ├─ 17.1 包管理工具
+│  │  │  ├─ npm与package.json
+│  │  │  ├─ yarn/pnpm特性
+│  │  │  └─ 依赖管理策略
+│  │  ├─ 17.2 代码质量工具
+│  │  │  ├─ ESLint配置
+│  │  │  ├─ Prettier格式化
+│  │  │  ├─ 代码规范制定
+│  │  │  └─ Husky与Git钩子
+│  │  └─ 17.3 调试工具
+│  │     ├─ Chrome DevTools
+│  │     ├─ Node.js调试
+│  │     ├─ 性能分析工具
+│  │     └─ 内存泄漏检测
+│  ├─ 模块18：构建与打包
+│  │  ├─ 18.1 Webpack核心
+│  │  │  ├─ 配置基础
+│  │  │  ├─ 加载器与插件
+│  │  │  ├─ 代码分割
+│  │  │  └─ 性能优化
+│  │  ├─ 18.2 现代构建工具
+│  │  │  ├─ Vite原理
+│  │  │  ├─ esbuild/swc
+│  │  │  ├─ 打包策略优化
+│  │  │  └─ 构建缓存
+│  │  └─ 18.3 模块化开发
+│  │     ├─ 模块规范对比
+│  │     ├─ 模块打包原理
+│  │     ├─ 动态导入
+│  │     └─ Tree Shaking
+│  ├─ 模块19：测试体系
+│  │  ├─ 19.1 测试基础
+│  │  │  ├─ 测试金字塔
+│  │  │  ├─ 测试驱动开发
+│  │  │  └─ 行为驱动开发
+│  │  ├─ 19.2 测试框架
+│  │  │  ├─ Jest配置与使用
+│  │  │  ├─ Mocha + Chai
+│  │  │  ├─ Vue测试工具
+│  │  │  └─ React测试库
+│  │  └─ 19.3 测试类型
+│  │     ├─ 单元测试
+│  │     ├─ 集成测试
+│  │     ├─ E2E测试
+│  │     └─ 快照测试
+│  └─ 模块20：部署与运维
+│     ├─ 20.1 部署策略
+│     │  ├─ 静态资源部署
+│     │  ├─ 服务器部署
+│     │  ├─ 容器化部署
+│     │  └─ Serverless部署
+│     ├─ 20.2 持续集成
+│     │  ├─ CI/CD概念
+│     │  ├─ GitHub Actions
+│     │  ├─ GitLab CI
+│     │  └─ Jenkins配置
+│     └─ 20.3 监控与日志
+│        ├─ 应用性能监控
+│        ├─ 错误追踪
+│        ├─ 日志收集
+│        └─ 报警机制
+├─ 阶段6：进阶与领域专精
+│  ├─ 模块21：性能优化
+│  │  ├─ 21.1 前端性能优化
+│  │  │  ├─ 加载性能
+│  │  │  ├─ 渲染性能
+│  │  │  ├─ 网络优化
+│  │  │  └─ 缓存策略
+│  │  ├─ 21.2 服务端性能优化
+│  │  │  ├─ 数据库优化
+│  │  │  ├─ 接口优化
+│  │  │  ├─ 并发处理
+│  │  │  └─ 内存管理
+│  │  └─ 21.3 性能分析工具
+│  │     ├─ Lighthouse
+│  │     ├─ WebPageTest
+│  │     ├─ 性能监控平台
+│  │     └─ 压测工具
+│  ├─ 模块22：架构设计
+│  │  ├─ 22.1 设计原则
+│  │  │  ├─ SOLID原则
+│  │  │  ├─ 设计模式应用
+│  │  │  ├─ 架构模式
+│  │  │  └─ 代码重构
+│  │  ├─ 22.2 前端架构
+│  │  │  ├─ 组件架构
+│  │  │  ├─ 状态架构
+│  │  │  ├─ 路由架构
+│  │  │  └─ 构建架构
+│  │  └─ 22.3 后端架构
+│  │     ├─ 分层架构
+│  │     ├─ 微服务架构
+│  │     ├─ 领域驱动设计
+│  │     └─ 事件驱动架构
+│  ├─ 模块23：移动端与跨平台
+│  │  ├─ 23.1 React Native
+│  │  │  ├─ 基础组件
+│  │  │  ├─ 原生模块
+│  │  │  ├─ 性能优化
+│  │  │  └─ 热更新
+│  │  ├─ 23.2 Flutter
+│  │  │  ├─ Dart语言基础
+│  │  │  ├─ Widget系统
+│  │  │  ├─ 状态管理
+│  │  │  └─ 平台通道
+│  │  └─ 23.3 小程序开发
+│  │     ├─ 微信小程序
+│  │     ├─ 跨端方案
+│  │     └─ 小程序框架
+│  └─ 模块24：领域专精
+│     ├─ 24.1 数据可视化
+│     │  ├─ D3.js原理
+│     │  ├─ ECharts使用
+│     │  ├─ Three.js 3D
+│     │  └─ 可视化设计
+│     ├─ 24.2 音视频处理
+│     │  ├─ WebRTC原理
+│     │  ├─ Canvas绘图
+│     │  ├─ Web Audio API
+│     │  └─ 流媒体处理
+│     └─ 24.3 新兴技术
+│        ├─ WebAssembly
+│        ├─ PWA技术
+│        ├─ 低代码平台
+│        └─ AI集成开发
+├─ 实战项目路线
+│  ├─ 项目1：个人博客系统
+│  │  ├─ 技术栈：React + Node.js + MongoDB
+│  │  ├─ 功能点：用户认证、文章管理、评论系统
+│  │  └─ 部署上线：Docker容器化部署
+│  ├─ 项目2：电商平台
+│  │  ├─ 技术栈：Vue3 + Nuxt3 + NestJS
+│  │  ├─ 功能点：商品管理、购物车、支付集成
+│  │  └─ 部署上线：微服务架构部署
+│  ├─ 项目3：实时协作工具
+│  │  ├─ 技术栈：React + TypeScript + Socket.io
+│  │  ├─ 功能点：实时聊天、文档协作、通知系统
+│  │  └─ 部署上线：负载均衡与水平扩展
+│  └─ 项目4：数据监控平台
+│     ├─ 技术栈：Vue + ECharts + Node.js
+│     ├─ 功能点：数据采集、实时展示、报警系统
+│     └─ 部署上线：分布式部署方案
+└─ 附录
+   ├─ A. 学习资源推荐
+   │  ├─ 在线教程
+   │  ├─ 技术书籍
+   │  ├─ 优质博客
+   │  └─ 开源项目
+   ├─ B. 面试准备指南
+   │  ├─ 算法题库
+   │  ├─ 面试题集
+   │  ├─ 简历编写
+   │  └─ 面试技巧
+   └─ C. 职业发展路径
+      ├─ 前端工程师
+      ├─ 全栈工程师
+      ├─ 架构师
+      └─ 技术专家
 ```

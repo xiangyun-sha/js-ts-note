@@ -1,1 +1,0 @@
-Theme: Math & Mathematical Functions.
