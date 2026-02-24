@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function DemoClass(foo1, foo2, options = {}) {
+				this.foo1 = foo1;
+				this.foo2 = foo2;
+
+				this.options = Object.assign({ foo1, foo2 }, options);
+			}
+
+			DemoClass.prototype.foofn1 = function () {
+				console.log('call ambulance! call ambulance!');
+
+				return;
+			};
+
+			DemoClass.prototype.foofn2 = () => {
+				console.log('but not for me!');
+
+				return;
+			};
+
+			const demoObj = new DemoClass('apple', 'banana');
+			demoObj.foofn1();
+			demoObj.foofn2();
+		</script>
+	</body>
+</html>

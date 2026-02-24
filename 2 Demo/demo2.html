@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			class DemoClass {
+				#foo1;
+				#foo2;
+				options;
+
+				constructor(foo1, foo2, options = {}) {
+					this.#foo1 = foo1;
+					this.#foo2 = foo2;
+					this.options = Object.assign({ foo1, foo2 }, options);
+				}
+
+				#foofn1() {
+					console.log(`foo, ${this.#foo1}`);
+
+					return;
+				}
+
+				foofn2() {
+					this.#foofn1();
+
+					return;
+				}
+			}
+
+			const demoObj = new DemoClass('apple', 'banana');
+			demoObj.foofn2();
+			console.log(demoObj.options);
+		</script>
+	</body>
+</html>
