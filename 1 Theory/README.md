@@ -199,7 +199,7 @@
     └─ 🖌️ 内联样式：style 属性直接定义s
 ```
 
-```bash
+```tree
 编程语言学习通用路径
 ├─ 一、基础语法入门（构建语言认知）
 │   ├─ 📝 注释：单行//、多行/* */、文档注释
@@ -304,40 +304,53 @@
         └─ 结合具体代码练习（如实现链表、内存池）强化理解
 ```
 
-``` bash
-1 Theory
-├─ Module.1 入门
-│  ├─ Part.1 基本
-│  │  ├─ Chr.1 基础语法
-│  │  │  ├─ Section.1 基本环境.md
-│  │  │  ├─ Section.2 注释.md
-│  │  │  ├─ Section.3 变量与命名规则.md
-│  │  │  ├─ Section.4 操作符与表达式.md
-│  │  │  ├─ Section.5 语句与流程控制.md
-│  │  │  ├─ Section.6 基本输入输出.md
-│  │  │  └─ Section.7 基本调试.md
-│  │  └─ Chr.2 结构化编程
-│  │     ├─ Section.1 函数.md
-│  │     ├─ Section.2 数据结构.md
-│  │     ├─ Section.3 模块化.md
-│  │     └─ Section.4 内存调用[*].md
-│  └─ Part.2 范式
-│     ├─ Chr.1 面向对象
-│     │  ├─ Section.1 类与对象.md
-│     │  ├─ Section.2 封装.md
-│     │  ├─ Section.3 原型连与继承.md
-│     │  ├─ Section.4 抽象.md
-│     │  ├─ Section.5 多态.md
-│     │  ├─ Section.6 泛型[TS].md
-│     │  ├─ Section.7 设计模式[*].md
-│     │  └─ Section.8 拓展[DI AOP].md
-│     ├─ Chr.2 函数式
-│     └─ Chr.3 元编程
-├─ Module.2 TypeScript
-├─ Module.3 标准库
-├─ Module.4 工程化
-├─ Module.5 生态系统
-├─ Module.6 应用与推荐框架
+```js
+js-ts-note
+├─ 1 Theory
+│  ├─ Module.1 入门
+│  │  ├─ Part.1 基本
+│  │  │  ├─ Chr.1 基础语法
+│  │  │  │  ├─ Section.1 基本环境.md
+│  │  │  │  ├─ Section.2 注释.md
+│  │  │  │  ├─ Section.3 变量与命名规则.md
+│  │  │  │  ├─ Section.4 操作符与表达式.md
+│  │  │  │  ├─ Section.5 语句与流程控制.md
+│  │  │  │  ├─ Section.6 基本输入输出.md
+│  │  │  │  └─ Section.7 基本调试.md
+│  │  │  └─ Chr.2 结构化编程
+│  │  │     ├─ Section.1 函数.md
+│  │  │     ├─ Section.2 数据结构.md
+│  │  │     └─ Section.3 模块化.md
+│  │  └─ Part.2 范式
+│  │     ├─ Chr.1 面向对象
+│  │     │  ├─ Section.1 类与对象.md
+│  │     │  ├─ Section.2 封装.md
+│  │     │  ├─ Section.3 原型连与继承.md
+│  │     │  ├─ Section.4 抽象.md
+│  │     │  ├─ Section.5 多态.md
+│  │     │  ├─ Section.6 泛型[*].md
+│  │     │  ├─ Section.7 设计模式[*].md
+│  │     │  └─ Section.8 拓展[*].md
+│  │     ├─ Chr.2 函数式
+│  │     └─ Chr.3 元编程
+│  ├─ Module.2 标准库
+│  │  ├─ Part.1 集合类
+│  │  ├─ Part.2 时间与日期
+│  │  ├─ Part.3 正则
+│  │  └─ Part.4 异步
+│  ├─ Module.3 TypeScript
+│  ├─ Module.4 生态系统
+│  │  ├─ Part.1 浏览器端
+│  │  └─ Part.2 服务器端
+│  ├─ Module.5 工程化
+│  ├─ Module.6 应用与推荐框架
+│  │  ├─ Part.1 数据科学--数据可视化
+│  │  └─ Part.2
+│  └─ README.md
+├─ 2 Demo
+│  └─ demo.1 .html
+├─ 3 Project
+├─ 4 Temp
+│  └─ Temp.1 文档化注释 与 代码即文档.md
 └─ README.md
-
 ```
