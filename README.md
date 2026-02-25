@@ -1,4 +1,83 @@
 ```bash
+js-ts-note
+├─ 1 Theory
+│  ├─ Module.1 入门
+│  │  ├─ Part.1 基本
+│  │  │  ├─ Chr.1 基础语法
+│  │  │  │  ├─ Section.1 基本环境.md
+│  │  │  │  ├─ Section.2 注释.md
+│  │  │  │  ├─ Section.3 变量与命名规则.md
+│  │  │  │  ├─ Section.4 操作符与表达式.md
+│  │  │  │  ├─ Section.5 语句与流程控制.md
+│  │  │  │  ├─ Section.6 基本输入输出.md
+│  │  │  │  └─ Section.7 基本调试.md
+│  │  │  └─ Chr.2 结构化编程
+│  │  │     ├─ Section.1 函数.md
+│  │  │     ├─ Section.2 数据结构.md
+│  │  │     └─ Section.3 模块化.md
+│  │  └─ Part.2 范式
+│  │     ├─ Chr.1 面向对象[!]
+│  │     │  ├─ Section.1 类与对象.md
+│  │     │  ├─ Section.2 封装.md
+│  │     │  ├─ Section.3 原型连与继承.md
+│  │     │  ├─ Section.4 抽象.md
+│  │     │  ├─ Section.5 多态.md
+│  │     │  ├─ Section.6 泛型[*].md
+│  │     │  ├─ Section.7 设计模式[*].md
+│  │     │  └─ Section.8 拓展[*].md
+│  │     ├─ Chr.2 函数式
+│  │     └─ Chr.3 元编程
+│  ├─ Module.2 标准库
+│  │  ├─ Part.1 核心内置对象
+│  │  │  ├─ Section.1 Object.md
+│  │  │  ├─ Section.2 Function.md
+│  │  │  ├─ Section.3 String.md
+│  │  │  └─ Section.4 Number.md
+│  │  ├─ Part.2 集合类
+│  │  │  ├─ Section.1 Array.md
+│  │  │  ├─ Section.2 TypedArray.md
+│  │  │  ├─ Section.3 Map.md
+│  │  │  ├─ Section.4 Set.md
+│  │  │  └─ Section.5 WeakMap & WeakSet.md
+│  │  ├─ Part.3 时间与日期
+│  │  ├─ Part.4 正则
+│  │  │  └─ Section.1 RegExp.md
+│  │  └─ Part.5 异步
+│  │     ├─ Section.1 EventQueue & EventLoop.md
+│  │     ├─ Section.2 Callback & Promise.md
+│  │     ├─ Section.3 async & await.md
+│  │     └─ Section.4 async loop & async iteration.md
+│  ├─ Module.3 TypeScript
+│  ├─ Module.4 生态系统
+│  │  ├─ Part.1 浏览器端
+│  │  │  ├─ Section.1 DOM
+│  │  │  ├─ Section.2 BOM
+│  │  │  ├─ Section.3 网络通信
+│  │  │  ├─ Section.4 数据与存储
+│  │  │  └─ Section.5 渲染与图形
+│  │  └─ Part.2 服务器端
+│  ├─ Module.5 工程化
+│  ├─ Module.6 应用与推荐框架
+│  │  ├─ Part.1 Vue
+│  │  ├─ Part.2 React
+│  │  ├─ Part.3 Express
+│  │  └─ Part.4 Koa
+│  └─ README.md
+├─ 2 Demo
+│  ├─ demo.1.html
+│  ├─ demo2.html
+│  └─ demo3.html
+├─ 3 Project
+├─ 4 Temp
+│  ├─ Temp.1 文档化注释 与 代码即文档.md
+│  ├─ Temp.2 组合优于继承.md
+│  ├─ Temp.3 明确是什么阻塞了主线程.md
+│  ├─ Temp.4 阻塞类型.md
+│  └─ Temp.5 链式编程.md
+└─ README.md
+```
+
+```bash
 JavaScript 全栈知识体系
 ├─ 阶段1：JavaScript 语言核心
 │  ├─ 模块1：语法基础
@@ -393,84 +472,4 @@ JavaScript 全栈知识体系
       ├─ 全栈工程师
       ├─ 架构师
       └─ 技术专家
-```
-
-```bash
-js-ts-note
-├─ 1 Theory
-│  ├─ Module.1 入门
-│  │  ├─ Part.1 基本
-│  │  │  ├─ Chr.1 基础语法
-│  │  │  │  ├─ Section.1 基本环境.md
-│  │  │  │  ├─ Section.2 注释.md
-│  │  │  │  ├─ Section.3 变量与命名规则.md
-│  │  │  │  ├─ Section.4 操作符与表达式.md
-│  │  │  │  ├─ Section.5 语句与流程控制.md
-│  │  │  │  ├─ Section.6 基本输入输出.md
-│  │  │  │  └─ Section.7 基本调试.md
-│  │  │  └─ Chr.2 结构化编程
-│  │  │     ├─ Section.1 函数.md
-│  │  │     ├─ Section.2 数据结构.md
-│  │  │     └─ Section.3 模块化.md
-│  │  └─ Part.2 范式
-│  │     ├─ Chr.1 面向对象[!]
-│  │     │  ├─ Section.1 类与对象.md
-│  │     │  ├─ Section.2 封装.md
-│  │     │  ├─ Section.3 原型连与继承.md
-│  │     │  ├─ Section.4 抽象.md
-│  │     │  ├─ Section.5 多态.md
-│  │     │  ├─ Section.6 泛型[*].md
-│  │     │  ├─ Section.7 设计模式[*].md
-│  │     │  └─ Section.8 拓展[*].md
-│  │     ├─ Chr.2 函数式
-│  │     └─ Chr.3 元编程
-│  ├─ Module.2 标准库
-│  │  ├─ Part.1 核心内置对象
-│  │  │  ├─ Section.1 Object.md
-│  │  │  ├─ Section.2 Function.md
-│  │  │  ├─ Section.3 String.md
-│  │  │  └─ Section.4 Number.md
-│  │  ├─ Part.2 集合类
-│  │  │  ├─ Section.1 Array.md
-│  │  │  ├─ Section.2 TypedArray.md
-│  │  │  ├─ Section.3 Map.md
-│  │  │  ├─ Section.4 Set.md
-│  │  │  └─ Section.5 WeakMap & WeakSet.md
-│  │  ├─ Part.3 时间与日期
-│  │  ├─ Part.4 正则
-│  │  │  └─ Section.1 RegExp.md
-│  │  └─ Part.5 异步
-│  │     ├─ Section.1 EventQueue & EventLoop.md
-│  │     ├─ Section.2 Callback & Promise.md
-│  │     ├─ Section.3 async & await.md
-│  │     └─ Section.4 async loop & async iteration.md
-│  ├─ Module.3 TypeScript
-│  ├─ Module.4 生态系统
-│  │  ├─ Part.1 浏览器端
-│  │  │  ├─ Section.1 DOM
-│  │  │  ├─ Section.2 BOM
-│  │  │  ├─ Section.3 网络通信
-│  │  │  ├─ Section.4 数据与存储
-│  │  │  └─ Section.5 渲染与图形
-│  │  └─ Part.2 服务器端
-│  ├─ Module.5 工程化
-│  ├─ Module.6 应用与推荐框架
-│  │  ├─ Part.1 Vue
-│  │  ├─ Part.2 React
-│  │  ├─ Part.3 Express
-│  │  └─ Part.4 Koa
-│  └─ README.md
-├─ 2 Demo
-│  ├─ demo.1.html
-│  ├─ demo2.html
-│  └─ demo3.html
-├─ 3 Project
-├─ 4 Temp
-│  ├─ Temp.1 文档化注释 与 代码即文档.md
-│  ├─ Temp.2 组合优于继承.md
-│  ├─ Temp.3 明确是什么阻塞了主线程.md
-│  ├─ Temp.4 阻塞类型.md
-│  └─ Temp.5 链式编程.md
-└─ README.md
-
 ```
