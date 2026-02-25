@@ -354,3 +354,33 @@ js-ts-note
 │  └─ Temp.1 文档化注释 与 代码即文档.md
 └─ README.md
 ```
+
+```bash
+Module.2 标准库
+├─ Part.0 核心内置对象
+│  ├─ Section.1 Object
+│  ├─ Section.2 Function
+│  ├─ Section.3 String
+│  ├─ Section.4 Number
+│  ├─ Section.5 Boolean
+│  ├─ Section.6 Symbol
+│  ├─ Section.7 BigInt
+│  ├─ Section.8 Error
+│  ├─ Section.9 Math
+│  └─ Section.10 JSON
+├─ Part.1 集合类
+│  ├─ Section.1 Array
+│  ├─ Section.2 Map
+│  ├─ Section.3 Set
+│  ├─ Section.4 WeakMap & WeakSet
+│  └─ Section.5 TypedArray
+├─ Part.2 时间与日期
+│  └─ Section.1 Date
+├─ Part.3 正则
+│  └─ Section.1 RegExp
+└─ Part.4 异步
+   ├─ Section.1 事件循环
+   ├─ Section.2 回调与 Promise
+   ├─ Section.3 async/await
+   └─ Section.4 异步迭代（选读）
+```
