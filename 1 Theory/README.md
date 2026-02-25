@@ -384,3 +384,76 @@ Module.2 标准库
    ├─ Section.3 async/await
    └─ Section.4 异步迭代（选读）
 ```
+
+```bash
+在 part.1 之前加 DOM 和 BOM 两章
+Module.4 生态系统
+├─ Part.1 浏览器端
+│  ├─ Section.1 网络通信
+│  │  ├─ 1.1 Fetch / XMLHttpRequest
+│  │  ├─ 1.2 WebSocket
+│  │  ├─ 1.3 Server-Sent Events
+│  │  └─ 1.4 WebRTC（进阶）
+│  ├─ Section.2 图形与渲染
+│  │  ├─ 2.1 Canvas 2D
+│  │  ├─ 2.2 WebGL（基础与进阶）
+│  │  ├─ 2.3 WebGPU（下一代图形）
+│  │  └─ 2.4 SVG / CSS 动画（可选）
+│  ├─ Section.3 存储与数据
+│  │  ├─ 3.1 Web Storage（localStorage/sessionStorage）
+│  │  ├─ 3.2 IndexedDB
+│  │  ├─ 3.3 Cache API
+│  │  └─ 3.4 File API / Blob
+│  ├─ Section.4 多媒体
+│  │  ├─ 4.1 Audio / Video API
+│  │  ├─ 4.2 Web Audio API
+│  │  └─ 4.3 Media Capture and Streams（摄像头/麦克风）
+│  ├─ Section.5 设备与传感器
+│  │  ├─ 5.1 Geolocation
+│  │  ├─ 5.2 Device Orientation / Motion
+│  │  ├─ 5.3 Battery Status
+│  │  └─ 5.4 其他传感器（光线、接近等）
+│  ├─ Section.6 性能与调试
+│  │  ├─ 6.1 Performance API
+│  │  ├─ 6.2 控制台与调试协议
+│  │  └─ 6.3 Lighthouse 等工具
+│  └─ Section.7 其他 API（剪贴板、全屏、支付等）
+└─ Part.2 服务器端
+   ├─ Section.1 Node.js 核心模块
+   ├─ Section.2 常用框架（Express、Koa、NestJS）
+   ├─ Section.3 数据库驱动与 ORM
+   ├─ Section.4 认证与授权
+   └─ Section.5 部署与运维
+
+```
+
+```bash
+Module.4 生态系统
+├─ Part.1 浏览器端
+│  ├─ Section.1 BOM（浏览器对象模型）
+│  │  ├─ 1.1 window 对象
+│  │  ├─ 1.2 定时器（setTimeout/setInterval）
+│  │  ├─ 1.3 location 与 history
+│  │  ├─ 1.4 navigator 与用户代理
+│  │  ├─ 1.5 screen 对象
+│  │  ├─ 1.6 对话框（alert/confirm/prompt）
+│  │  └─ 1.7 全局对象与全局函数
+│  ├─ Section.2 DOM（文档对象模型）
+│  │  ├─ 2.1 DOM 树与节点类型
+│  │  ├─ 2.2 元素选取（getElementById, querySelector 等）
+│  │  ├─ 2.3 节点遍历与关系
+│  │  ├─ 2.4 节点操作（创建、插入、删除、替换）
+│  │  ├─ 2.5 属性操作（getAttribute, setAttribute, dataset）
+│  │  ├─ 2.6 样式操作（style, classList, getComputedStyle）
+│  │  ├─ 2.7 元素尺寸与滚动（offset, client, scroll）
+│  │  ├─ 2.8 事件系统（事件流、事件处理、事件对象、事件委托）
+│  │  ├─ 2.9 表单与控件
+│  │  └─ 2.10 动态脚本与样式
+│  ├─ Section.3 网络通信（原 Section.1）
+│  ├─ Section.4 图形与渲染（原 Section.2）
+│  ├─ Section.5 存储与数据（原 Section.3）
+│  ├─ Section.6 多媒体（原 Section.4）
+│  ├─ Section.7 设备与传感器（原 Section.5）
+│  └─ Section.8 性能与调试（原 Section.6）
+
+```
