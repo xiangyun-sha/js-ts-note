@@ -6,9 +6,9 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { RouterView } from 'vue-router';
 import * as Cesium from 'cesium';
-import { onMounted } from 'vue';
 
 onMounted(() => {
 	const viewer = new Cesium.Viewer('cesiumContainer');
