@@ -1,0 +1,17 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": "> 0.25%, not dead",
+                "useBuiltIns": "usage",
+                "corejs": 3
+            }
+        ],
+        "@babel/preset-typescript"
+    ],
+    "plugins": [
+        // 如果使用 Vue 2 的 JSX 插件（Vue 3 的 JSX 需另外配置）
+        // "@vue/babel-plugin-jsx"
+    ]
+}
