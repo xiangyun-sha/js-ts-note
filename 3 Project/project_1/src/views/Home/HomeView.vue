@@ -1,7 +1,9 @@
 <template>
 	<div>
-		<h3>{{ counterRef }}</h3>
-		<el-button type="primary" size="small" circle @click="add"></el-button>
+		<div style="display: flex; justify-content: center; align-items: center">
+			<div>{{ counterRef }}</div>
+			<el-button type="primary" size="small" circle @click="add">+</el-button>
+		</div>
 	</div>
 </template>
 

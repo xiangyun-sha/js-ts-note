@@ -1,5 +1,6 @@
+#
 
-```
+``` bash
 project_1
 ├─ .husky
 │  └─ pre-commit
@@ -16,6 +17,7 @@ project_1
 ├─ package.json
 ├─ pnpm-lock.yaml
 ├─ public
+│  ├─ favicon.ico
 │  └─ index.html
 ├─ src
 │  ├─ App.vue
@@ -37,6 +39,7 @@ project_1
 │  │  ├─ composables
 │  │  └─ utils
 │  ├─ components.d.ts
+│  ├─ env.d.ts
 │  ├─ main.ts
 │  ├─ router
 │  │  ├─ interceptor.ts
