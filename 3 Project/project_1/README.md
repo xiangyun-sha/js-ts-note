@@ -1,13 +1,12 @@
 #
 
-``` bash
+```bash
 project_1
 ├─ .husky
 │  └─ pre-commit
 ├─ .prettierrc
 ├─ README.md
 ├─ babel.config.json
-├─ cypress
 ├─ cypress.config.js
 ├─ dockerfile
 ├─ eslint.config.js
@@ -27,17 +26,18 @@ project_1
 │  │  │  │  ├─ baseMapInstance.ts
 │  │  │  │  └─ userInstance.ts
 │  │  │  └─ services
-│  │  │     ├─ baseMapService
-│  │  │     └─ userService
+│  │  │     ├─ gisServices.ts
+│  │  │     └─ userServices.ts
+│  │  ├─ utils
+│  │  │  ├─ auth.ts
+│  │  │  └─ interceptors.ts
 │  │  └─ ws
 │  ├─ assets
-│  │  ├─ images
 │  │  └─ styles
+│  │     ├─ main.css
+│  │     ├─ preset.css
+│  │     └─ reset.css
 │  ├─ auto-imports.d.ts
-│  ├─ common
-│  │  ├─ components
-│  │  ├─ composables
-│  │  └─ utils
 │  ├─ components.d.ts
 │  ├─ env.d.ts
 │  ├─ main.ts
@@ -51,14 +51,9 @@ project_1
 │  │  └─ counter.ts
 │  └─ views
 │     ├─ About
-│     │  ├─ AboutView.vue
-│     │  ├─ components
-│     │  └─ composables
+│     │  └─ AboutView.vue
 │     └─ Home
-│        ├─ HomeView.vue
-│        ├─ components
-│        └─ composables
-├─ test
+│        └─ HomeView.vue
 ├─ tsconfig.json
 └─ webpack.config.js
 
