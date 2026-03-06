@@ -1,4 +1,4 @@
-# project scheisse verdammt
+# project
 
 ```bash
 js-ts-note
