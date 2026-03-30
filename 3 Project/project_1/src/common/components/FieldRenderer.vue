@@ -1,12 +1,12 @@
 <template>
 	<div>
-		<DynamicForm :field-list="RENDERERFIELD_LIST" />
+		<component :is="rendererFnComputed" />
 	</div>
 </template>
 
 <script setup lang="ts">
 /**
- * @BUILD_TIME 2026-03-30 15:45:40
+ * @BUILD_TIME 2026-03-30 15:57:34
  * @DESCRIPTION Description here
  * @AUTHOR Your Name
  * @MODIFIED_RECORD
@@ -14,54 +14,33 @@
  */
 
 /*==================== 外部引入 ====================*/
+import { computed } from 'vue';
 
 /*==================== 内部引入 ====================*/
-import DynamicForm from '@/common/components/DynamicForm.vue';
+import { useFieldRenderer } from '../composables/useFieldRenerer';
 
 /*==================== 类型定义 ====================*/
 
 /*==================== 常量定义 ====================*/
-/* 测试用 字段表 */
-const RENDERERFIELD_LIST: Array<RendererField> = [
-	{
-		type: 'input',
-		prop: 'name',
-		label: '名称',
-		requierd: true,
-	},
-	{
-		type: 'radiogroups',
-		prop: 'hobbies',
-		label: '兴趣',
-		requierd: false,
-		preset: {
-			options: ['radio 1', 'radio 2', 'radio 3'],
-		},
-	},
-	{
-		type: 'select',
-		prop: 'category',
-		label: '类别',
-		requierd: false,
-		preset: {
-			optiosn: ['option 1', 'option 2', 'option 3'],
-		},
-	},
-];
 
 /*==================== 组件Props ===================*/
+const props = defineProps<{
+	field: RendererField;
+}>();
 
 /*==================== Emits定义 ===================*/
 
 /*==================== 状态管理 ====================*/
 
 /*==================== 计算属性 ====================*/
+const rendererFnComputed = computed(() => rendererFn);
 
 /*==================== 监听器 ======================*/
 
 /*==================== 生命周期 ====================*/
 
 /*==================== 函数定义 ====================*/
+const { rendererFn } = useFieldRenderer(props);
 </script>
 
 <style scoped></style>

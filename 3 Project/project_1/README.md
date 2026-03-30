@@ -1,6 +1,6 @@
 #
 
-```bash
+``` bash
 project_1
 ├─ .husky
 │  └─ pre-commit
@@ -13,33 +13,48 @@ project_1
 ├─ jenkinsfile
 ├─ jest.config.js
 ├─ nginx.conf
+├─ package-lock.json
 ├─ package.json
-├─ pnpm-lock.yaml
 ├─ public
+│  ├─ dic
+│  │  └─ systemDic.ts
 │  ├─ favicon.ico
-│  └─ index.html
+│  ├─ index.html
+│  └─ plugins
 ├─ src
 │  ├─ App.vue
 │  ├─ api
 │  │  ├─ http
-│  │  │  ├─ instances
-│  │  │  │  ├─ baseMapInstance.ts
-│  │  │  │  └─ userInstance.ts
-│  │  │  └─ services
-│  │  │     ├─ gisServices.ts
-│  │  │     └─ userServices.ts
-│  │  ├─ utils
-│  │  │  ├─ auth.ts
-│  │  │  └─ interceptors.ts
+│  │  │  ├─ clients
+│  │  │  │  ├─ gis.ts
+│  │  │  │  └─ user.ts
+│  │  │  ├─ services
+│  │  │  │  ├─ gis.ts
+│  │  │  │  └─ user.ts
+│  │  │  ├─ types
+│  │  │  │  ├─ gis.ts
+│  │  │  │  └─ user.ts
+│  │  │  └─ utils
+│  │  │     ├─ auth.ts
+│  │  │     └─ interceptors.ts
+│  │  ├─ index.ts
 │  │  └─ ws
+│  │     └─ index.ts
 │  ├─ assets
+│  │  ├─ img
 │  │  └─ styles
 │  │     ├─ main.css
-│  │     ├─ preset.css
-│  │     └─ reset.css
+│  │     └─ preset.css
 │  ├─ auto-imports.d.ts
+│  ├─ common
+│  │  ├─ components
+│  │  │  ├─ DynamicForm.vue
+│  │  │  └─ FieldRenderer.vue
+│  │  └─ composables
+│  │     └─ useFieldRenerer.ts
 │  ├─ components.d.ts
 │  ├─ env.d.ts
+│  ├─ global.d.ts
 │  ├─ main.ts
 │  ├─ router
 │  │  ├─ interceptor.ts
@@ -51,9 +66,13 @@ project_1
 │  │  └─ counter.ts
 │  └─ views
 │     ├─ About
-│     │  └─ AboutView.vue
+│     │  ├─ AboutView.vue
+│     │  ├─ components
+│     │  └─ composables
 │     └─ Home
-│        └─ HomeView.vue
+│        ├─ HomeView.vue
+│        ├─ components
+│        └─ composables
 ├─ tsconfig.json
 └─ webpack.config.js
 
