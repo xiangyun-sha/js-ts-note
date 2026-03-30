@@ -89,11 +89,11 @@ module.exports = (env, argv) => {
 			}),
 			AutoImport({
 				resolvers: [ElementPlusResolver()],
-				dts: path.resolve(__dirname, 'src/type/auto-imports.d.ts'),
+				dts: path.resolve(__dirname, 'src/types/auto-imports.d.ts'),
 			}),
 			Components({
 				resolvers: [ElementPlusResolver()],
-				dts: path.resolve(__dirname, 'src/type/components.d.ts'),
+				dts: path.resolve(__dirname, 'src/types/components.d.ts'),
 			}),
 		],
 		devServer: {
