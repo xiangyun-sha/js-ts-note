@@ -15,14 +15,21 @@ module.exports = (env, argv) => {
 	console.log(process.env);
 
 	return {
+		/* 开发/生产模式 */
 		mode: argv.mode || 'development',
+
+		/* 入口文件 */
 		entry: './src/main.ts',
+
+		/* 输出文件与结构 */
 		output: {
 			filename: 'js/[name].[contenthash:8].js',
 			path: path.resolve(__dirname, 'dist'),
 			clean: true,
 			publicPath: '/',
 		},
+
+		/* 解译 */
 		resolve: {
 			extensions: ['.js', '.ts', '.tsx', '.json', '.vue'],
 			alias: {
@@ -30,6 +37,8 @@ module.exports = (env, argv) => {
 				cesium: path.resolve(__dirname, 'node_modules/cesium'), // ✅ 指向根目录
 			},
 		},
+
+		/* 模块 */
 		module: {
 			rules: [
 				{
@@ -49,6 +58,8 @@ module.exports = (env, argv) => {
 				},
 			],
 		},
+
+		/* 插件 */
 		plugins: [
 			new VueLoaderPlugin(),
 			new HtmlWebpackPlugin({
@@ -96,6 +107,8 @@ module.exports = (env, argv) => {
 				dts: path.resolve(__dirname, 'src/types/components.d.ts'),
 			}),
 		],
+
+		/* 服务器 */
 		devServer: {
 			static: path.join(__dirname, 'dist'),
 			port: 8080,

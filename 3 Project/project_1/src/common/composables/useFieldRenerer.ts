@@ -5,16 +5,23 @@ import { useStandardField } from './useStandardField';
  * @param { P } props
  * @returns { Record<string, any> }
  */
-export function useFieldRenderer<P extends { field: RendererField }>(props: P) {
+export function useFieldRenderer<
+	P extends {
+		field: RendererField;
+		formData: Record<string, any>;
+		onupdate: <R extends RendererField, E extends any>(field: R, value: E) => void;
+		onchange: <R extends RendererField, E extends any>(field: R, value: E) => void;
+	},
+>(props: P) {
 	/* 从父组件获取字段 */
 	const { field } = props;
 
 	/* 解译字段 */
-	const { type } = field;
+	const { elType } = field;
 
 	/* 确定具体渲染逻辑 */
 	let composable: Function;
-	switch (type) {
+	switch (elType) {
 		/* 上传类型 */
 		case 'image':
 		case 'video':

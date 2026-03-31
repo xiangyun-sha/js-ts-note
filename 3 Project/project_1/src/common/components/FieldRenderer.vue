@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<!-- 动态处理 -->
 		<component :is="rendererFnComputed" />
 	</div>
 </template>
@@ -26,6 +27,9 @@ import { useFieldRenderer } from '../composables/useFieldRenerer';
 /*==================== 组件Props ===================*/
 const props = defineProps<{
 	field: RendererField;
+	formData: Record<string, any>;
+	onupdate: <P extends RendererField, E extends any>(field: P, value: E) => void;
+	onchange: <P extends RendererField, E extends any>(field: P, value: E) => void;
 }>();
 
 /*==================== Emits定义 ===================*/

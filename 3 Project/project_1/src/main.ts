@@ -5,6 +5,7 @@ import App from './App.vue';
 import router from '@/router/router';
 
 import 'reset-css';
+import 'element-plus/dist/index.css';
 
 const app = createApp(App);
 

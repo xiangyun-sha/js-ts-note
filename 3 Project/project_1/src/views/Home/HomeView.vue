@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<DynamicForm :field-list="RENDERERFIELD_LIST" />
+		<div>
+			<DynamicForm :field-list="RENDERERFIELD_LIST" @change="console.log('step in')" />
+		</div>
 	</div>
 </template>
 
@@ -24,27 +26,50 @@ import DynamicForm from '@/common/components/DynamicForm.vue';
 /* 测试用 字段表 */
 const RENDERERFIELD_LIST: Array<RendererField> = [
 	{
-		type: 'input',
-		prop: 'name',
+		fieldName: 'name',
+		elType: 'input',
 		label: '名称',
-		requierd: true,
-	},
-	{
-		type: 'radiogroups',
-		prop: 'hobbies',
-		label: '兴趣',
-		requierd: false,
+		required: true,
 		preset: {
-			options: ['radio 1', 'radio 2', 'radio 3'],
+			defaultVal: '',
 		},
 	},
 	{
-		type: 'select',
-		prop: 'category',
-		label: '类别',
-		requierd: false,
+		fieldName: 'date',
+		elType: 'datetime',
+		label: '日期',
+		required: true,
 		preset: {
-			optiosn: ['option 1', 'option 2', 'option 3'],
+			defaultVal: '',
+		},
+	},
+	{
+		fieldName: 'isNaN',
+		elType: 'boolean',
+		label: '是否为空',
+		required: true,
+		preset: {
+			defaultVal: '',
+		},
+	},
+	{
+		fieldName: 'hobbies',
+		elType: 'radiobox',
+		label: '兴趣',
+		required: false,
+		preset: {
+			options: ['radio 1', 'radio 2', 'radio 3'],
+			defaultVal: 'radio 1',
+		},
+	},
+	{
+		fieldName: 'category',
+		elType: 'select',
+		label: '类别',
+		required: false,
+		preset: {
+			options: ['category 1', 'category 2', 'category 3'],
+			defaultVal: '',
 		},
 	},
 ];
