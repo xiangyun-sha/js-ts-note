@@ -1,6 +1,6 @@
 #
 
-``` bash
+```bash
 project_1
 ├─ .husky
 │  └─ pre-commit
@@ -16,11 +16,8 @@ project_1
 ├─ package-lock.json
 ├─ package.json
 ├─ public
-│  ├─ dic
-│  │  └─ systemDic.ts
 │  ├─ favicon.ico
-│  ├─ index.html
-│  └─ plugins
+│  └─ index.html
 ├─ src
 │  ├─ App.vue
 │  ├─ api
@@ -45,25 +42,29 @@ project_1
 │  │  └─ styles
 │  │     ├─ main.css
 │  │     └─ preset.css
-│  ├─ auto-imports.d.ts
 │  ├─ common
 │  │  ├─ components
 │  │  │  ├─ DynamicForm.vue
 │  │  │  └─ FieldRenderer.vue
 │  │  └─ composables
-│  │     └─ useFieldRenerer.ts
-│  ├─ components.d.ts
-│  ├─ env.d.ts
-│  ├─ global.d.ts
+│  │     ├─ useFieldRenerer.ts
+│  │     ├─ useGeomField.ts
+│  │     ├─ useStandardField.ts
+│  │     └─ useUploadField.ts
 │  ├─ main.ts
 │  ├─ router
 │  │  ├─ interceptor.ts
 │  │  ├─ router.ts
 │  │  └─ routes.ts
-│  ├─ shims-css.d.ts
-│  ├─ shims-vue.d.ts
 │  ├─ stores
 │  │  └─ counter.ts
+│  ├─ types
+│  │  ├─ auto-imports.d.ts
+│  │  ├─ components.d.ts
+│  │  ├─ env.d.ts
+│  │  ├─ global.d.ts
+│  │  ├─ shims-css.d.ts
+│  │  └─ shims-vue.d.ts
 │  └─ views
 │     ├─ About
 │     │  ├─ AboutView.vue

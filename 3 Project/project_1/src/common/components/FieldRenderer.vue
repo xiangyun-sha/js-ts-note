@@ -28,8 +28,14 @@ import { useFieldRenderer } from '../composables/useFieldRenerer';
 const props = defineProps<{
 	field: RendererField;
 	formData: Record<string, any>;
-	onupdate: <P extends RendererField, E extends any>(field: P, value: E) => void;
-	onchange: <P extends RendererField, E extends any>(field: P, value: E) => void;
+	onupdate: <P extends RendererField, E extends any>(
+		field: P,
+		value: E,
+	) => void;
+	onchange: <P extends RendererField, E extends any>(
+		field: P,
+		value: E,
+	) => void;
 }>();
 
 /*==================== Emits定义 ===================*/

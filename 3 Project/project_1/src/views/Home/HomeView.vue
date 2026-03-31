@@ -1,7 +1,10 @@
 <template>
 	<div>
 		<div>
-			<DynamicForm :field-list="RENDERERFIELD_LIST" @change="console.log('step in')" />
+			<DynamicForm
+				:field-list="RENDERERFIELD_LIST"
+				@change="console.log('step in')"
+			/>
 		</div>
 	</div>
 </template>
@@ -38,7 +41,7 @@ const RENDERERFIELD_LIST: Array<RendererField> = [
 		fieldName: 'date',
 		elType: 'datetime',
 		label: '日期',
-		required: true,
+		required: false,
 		preset: {
 			defaultVal: '',
 		},
@@ -47,7 +50,7 @@ const RENDERERFIELD_LIST: Array<RendererField> = [
 		fieldName: 'isNaN',
 		elType: 'boolean',
 		label: '是否为空',
-		required: true,
+		required: false,
 		preset: {
 			defaultVal: '',
 		},
@@ -69,6 +72,24 @@ const RENDERERFIELD_LIST: Array<RendererField> = [
 		required: false,
 		preset: {
 			options: ['category 1', 'category 2', 'category 3'],
+			defaultVal: '',
+		},
+	},
+	{
+		fieldName: 'desc',
+		elType: 'textarea',
+		label: '描述',
+		required: false,
+		preset: {
+			defaultVal: '',
+		},
+	},
+	{
+		fieldName: 'accuracy',
+		elType: 'number',
+		label: '误差',
+		required: false,
+		preset: {
 			defaultVal: '',
 		},
 	},

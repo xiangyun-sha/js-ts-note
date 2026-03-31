@@ -9,8 +9,14 @@ export function useFieldRenderer<
 	P extends {
 		field: RendererField;
 		formData: Record<string, any>;
-		onupdate: <R extends RendererField, E extends any>(field: R, value: E) => void;
-		onchange: <R extends RendererField, E extends any>(field: R, value: E) => void;
+		onupdate: <R extends RendererField, E extends any>(
+			field: R,
+			value: E,
+		) => void;
+		onchange: <R extends RendererField, E extends any>(
+			field: R,
+			value: E,
+		) => void;
 	},
 >(props: P) {
 	/* 从父组件获取字段 */

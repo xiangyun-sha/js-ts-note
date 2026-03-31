@@ -1,5 +1,14 @@
 import { h } from 'vue';
-import { ElInput, ElInputNumber, ElSelect, ElOption, ElRadioGroup, ElRadio, ElSwitch, ElDatePicker, ariaProps } from 'element-plus';
+import {
+	ElInput,
+	ElInputNumber,
+	ElSelect,
+	ElOption,
+	ElRadioGroup,
+	ElRadio,
+	ElSwitch,
+	ElDatePicker,
+} from 'element-plus';
 
 export function useStandardField(props: {
 	field: RendererField;
@@ -25,21 +34,41 @@ export function useStandardField(props: {
 
 			case 'radiobox': {
 				const options = (field.preset?.options || []).map((opt: any) =>
-					typeof opt === 'object' ? { label: opt.label || opt.value, value: opt.value || opt.label } : { label: opt, value: opt },
+					typeof opt === 'object'
+						? {
+								label: opt.label || opt.value,
+								value: opt.value || opt.label,
+							}
+						: { label: opt, value: opt },
 				);
 				return h(
 					ElRadioGroup,
 					{
-						modelValue: formData[fieldName] as string | number | boolean,
+						modelValue: formData[fieldName] as
+							| string
+							| number
+							| boolean,
 						'onUpdate:modelValue': handleUpdate,
 						onChange: handleChange,
 					},
-					() => options.map((opt) => h(ElRadio, { label: opt.value, key: opt.value }, () => opt.label)),
+					() =>
+						options.map((opt) =>
+							h(
+								ElRadio,
+								{ label: opt.value, key: opt.value },
+								() => opt.label,
+							),
+						),
 				);
 			}
 
 			case 'select': {
-				const selectOptions = (field.preset?.options || []).map((opt: any) => (typeof opt === 'object' && opt.label ? opt : { label: String(opt), value: opt }));
+				const selectOptions = (field.preset?.options || []).map(
+					(opt: any) =>
+						typeof opt === 'object' && opt.label
+							? opt
+							: { label: String(opt), value: opt },
+				);
 				return h(
 					ElSelect as any,
 					{
@@ -47,7 +76,7 @@ export function useStandardField(props: {
 						modelValue: formData[fieldName],
 						'onUpdate:modelValue': handleUpdate,
 						onChange: handleChange,
-						style: 'width: 150px;',
+						style: 'width: 200px;',
 					},
 					() =>
 						selectOptions.map((opt) =>
@@ -85,10 +114,16 @@ export function useStandardField(props: {
 			case 'password':
 				return h(ElInput, {
 					modelValue: formData[fieldName] as string,
-					type: elType === 'password' ? 'password' : elType === 'textarea' ? 'textarea' : 'text',
+					type:
+						elType === 'password'
+							? 'password'
+							: elType === 'textarea'
+								? 'textarea'
+								: 'text',
 					placeholder: `请输入${label}`,
 					'onUpdate:modelValue': handleUpdate,
 					onChange: handleChange,
+					rows: field.preset.rows || 3,
 				});
 
 			default:
