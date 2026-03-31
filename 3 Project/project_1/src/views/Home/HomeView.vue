@@ -3,7 +3,7 @@
 		<div>
 			<DynamicForm
 				:field-list="RENDERERFIELD_LIST"
-				@change="console.log('step in')"
+				@submit="handleSubmitAsync"
 			/>
 		</div>
 	</div>
@@ -22,92 +22,23 @@
 
 /*==================== 内部引入 ====================*/
 import DynamicForm from '@/common/components/DynamicForm.vue';
+import RENDERERFIELD_LIST from '@/assets/static/testRendererList';
+import { useHomeView } from './composables/useHomeView';
 
 /*==================== 类型定义 ====================*/
 
 /*==================== 常量定义 ====================*/
-/* 测试用 字段表 */
-const RENDERERFIELD_LIST: Array<RendererField> = [
-	{
-		fieldName: 'name',
-		elType: 'input',
-		label: '名称',
-		required: true,
-		preset: {
-			defaultVal: '',
-		},
-	},
-	{
-		fieldName: 'date',
-		elType: 'datetime',
-		label: '日期',
-		required: false,
-		preset: {
-			defaultVal: '',
-		},
-	},
-	{
-		fieldName: 'isNaN',
-		elType: 'boolean',
-		label: '是否为空',
-		required: false,
-		preset: {
-			defaultVal: '',
-		},
-	},
-	{
-		fieldName: 'hobbies',
-		elType: 'radiobox',
-		label: '兴趣',
-		required: false,
-		preset: {
-			options: ['radio 1', 'radio 2', 'radio 3'],
-			defaultVal: 'radio 1',
-		},
-	},
-	{
-		fieldName: 'category',
-		elType: 'select',
-		label: '类别',
-		required: false,
-		preset: {
-			options: ['category 1', 'category 2', 'category 3'],
-			defaultVal: '',
-		},
-	},
-	{
-		fieldName: 'desc',
-		elType: 'textarea',
-		label: '描述',
-		required: false,
-		preset: {
-			defaultVal: '',
-		},
-	},
-	{
-		fieldName: 'accuracy',
-		elType: 'number',
-		label: '误差',
-		required: false,
-		preset: {
-			defaultVal: '',
-		},
-	},
-];
 
 /*==================== 组件Props ===================*/
 
 /*==================== Emits定义 ===================*/
 
 /*==================== 状态管理 ====================*/
-
-/*==================== 计算属性 ====================*/
+const { handleSubmitAsync } = useHomeView();
 
 /*==================== 监听器 ======================*/
 
 /*==================== 生命周期 ====================*/
-
-/*==================== 函数定义 ====================*/
 </script>
 
 <style scoped></style>

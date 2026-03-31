@@ -40,7 +40,8 @@ const props = defineProps<{
 
 /*==================== Emits定义 ===================*/
 
-/*==================== 状态管理 ====================*/
+/*==================== 组合式函数 ==================*/
+const { rendererFn } = useFieldRenderer(props);
 
 /*==================== 计算属性 ====================*/
 const rendererFnComputed = computed(() => rendererFn);
@@ -48,9 +49,6 @@ const rendererFnComputed = computed(() => rendererFn);
 /*==================== 监听器 ======================*/
 
 /*==================== 生命周期 ====================*/
-
-/*==================== 函数定义 ====================*/
-const { rendererFn } = useFieldRenderer(props);
 </script>
 
 <style scoped></style>

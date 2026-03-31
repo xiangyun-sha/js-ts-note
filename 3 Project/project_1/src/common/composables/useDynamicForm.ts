@@ -3,7 +3,10 @@ import type { FormInstance } from 'element-plus';
 
 export function useDyanmicForm<
 	P extends { fieldList: RendererField[] },
-	E extends { (e: 'change', value: any): void },
+	E extends {
+		(e: 'change', value: any): void;
+		(e: 'submit', value: any): void;
+	},
 >(props: P, emits: E) {
 	/* 表单模板引用 */
 	const formElRef = useTemplateRef<FormInstance>('formEl');
@@ -89,7 +92,8 @@ export function useDyanmicForm<
 		try {
 			/* 校验通过，继续提交 */
 			await formElRef.value.validate();
-			console.log('表单数据：', formDataRx);
+			// console.log('表单数据：', formDataRx);
+			emits('submit', formDataRx);
 
 			/* 调用提交接口... */
 		} catch (errors: any) {

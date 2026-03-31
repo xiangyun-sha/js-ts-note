@@ -48,17 +48,17 @@ import { useDyanmicForm } from '../composables/useDynamicForm';
 
 /*==================== 常量定义 ====================*/
 
-/*==================== 组件Props ===================*/
+/*==================== Props / Emits ================*/
 const props = defineProps<{
 	fieldList: RendererField[];
 }>();
 
-/*==================== Emits定义 ===================*/
 const emits = defineEmits<{
-	(e: 'change', valeu: any): void;
+	(e: 'change', value: any): void;
+	(e: 'submit', value: any): void;
 }>();
 
-/*==================== 状态管理 ====================*/
+/*==================== 组合式函数 ==================*/
 const {
 	formElRef,
 	formDataRx,
@@ -69,8 +69,6 @@ const {
 	handleFieldValueUpdated,
 	handleSubmit,
 } = useDyanmicForm(props, emits);
-
-/*==================== 函数定义 ====================*/
 
 /*==================== 计算属性 ====================*/
 
