@@ -1,4 +1,4 @@
-export function useAboutView() {
+export function useHomeView() {
 	/**
 	 * 业务层提交
 	 * @async

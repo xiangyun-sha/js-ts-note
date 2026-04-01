@@ -1,0 +1,8 @@
+#dynamic-form {
+	position: fixed;
+
+	width: calc(100vw - 300px);
+	height: 200px;
+
+	z-index: 999;
+}

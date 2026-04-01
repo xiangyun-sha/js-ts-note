@@ -103,6 +103,11 @@ export function useDyanmicForm<
 
 			/* 可选：提示用户 */
 			ElMessage.warning('请填写完整并正确表单');
+
+			/* 滚动到首个错误项 */
+			const firstErrorField = Object.keys(errors)[0];
+			if (firstErrorField)
+				formElRef.value?.scrollToField(firstErrorField);
 		}
 	}
 

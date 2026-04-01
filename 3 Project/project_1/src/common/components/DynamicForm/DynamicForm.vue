@@ -1,29 +1,42 @@
 <template>
 	<div>
-		<el-form ref="formEl" :model="formDataRx" :rules="formRulesRx">
-			<!-- 字段表单部分 -->
-			<template v-for="field in fieldList" :key="field.fieldName">
-				<el-form-item
-					:label="field.label"
-					:prop="field.fieldName"
-					:required="field.required"
-				>
-					<FieldRenderer
-						:field="field"
-						:form-data="formDataRx"
-						:onupdate="handleFieldValueUpdated"
-						:onchange="handleFieldValueChanged"
-					/>
-				</el-form-item>
-			</template>
+		<div id="dynamic-form">
+			<el-card>
+				<el-scrollbar height="200px">
+					<el-form
+						ref="formEl"
+						:model="formDataRx"
+						:rules="formRulesRx"
+					>
+						<!-- 字段表单部分 -->
+						<template
+							v-for="field in fieldList"
+							:key="field.fieldName"
+						>
+							<el-form-item
+								:label="field.label"
+								:prop="field.fieldName"
+								:required="field.required"
+							>
+								<FieldRenderer
+									:field="field"
+									:form-data="formDataRx"
+									:onupdate="handleFieldValueUpdated"
+									:onchange="handleFieldValueChanged"
+								/>
+							</el-form-item>
+						</template>
 
-			<!-- 提交以及其他操作部分 -->
-			<el-form-item>
-				<el-button type="primary" @click="handleSubmit">
-					提交
-				</el-button>
-			</el-form-item>
-		</el-form>
+						<!-- 提交以及其他操作部分 -->
+						<el-form-item>
+							<el-button type="primary" @click="handleSubmit">
+								提交
+							</el-button>
+						</el-form-item>
+					</el-form>
+				</el-scrollbar>
+			</el-card>
+		</div>
 	</div>
 </template>
 
@@ -40,8 +53,8 @@
 import { watch } from 'vue';
 
 /*==================== 内部引入 ====================*/
-import FieldRenderer from './FieldRenderer.vue';
-import { useDyanmicForm } from '../composables/useDynamicForm';
+import FieldRenderer from '../FieldRenderer/FieldRenderer.vue';
+import { useDyanmicForm } from './composables/useDynamicForm';
 
 /*==================== 类型定义 ====================*/
 

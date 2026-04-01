@@ -23,8 +23,8 @@
 
 /*==================== 内部引入 ====================*/
 import RENDERERFIELD_LIST from '@/assets/static/testRendererList';
-import DynamicForm from '@/common/components/DynamicForm.vue';
-import { useHomeView } from './composables/useAboutView';
+import DynamicForm from '@/common/components/DynamicForm/DynamicForm.vue';
+import { useAboutView } from './composables/useAboutView';
 
 /*==================== 类型定义 ====================*/
 
@@ -35,7 +35,7 @@ import { useHomeView } from './composables/useAboutView';
 /*==================== Emits定义 ===================*/
 
 /*==================== 状态管理 ====================*/
-const { handleSubmitAsync } = useHomeView();
+const { handleSubmitAsync } = useAboutView();
 
 /*==================== 监听器 ======================*/
 

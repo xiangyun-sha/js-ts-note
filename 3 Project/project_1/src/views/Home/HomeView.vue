@@ -1,63 +1,42 @@
 <template>
 	<div>
-		<div id="cesiumContainer"></div>
+		<DynamicForm
+			:field-list="RENDERERFIELD_LIST"
+			@submit="handleSubmitAsync"
+		/>
 	</div>
 </template>
 
 <script setup lang="ts">
 /**
- * @BUILD_TIME 2026-04-01 15:20:06
+ * @BUILD_TIME 2026-03-30 15:45:40
  * @DESCRIPTION Description here
  * @AUTHOR Your Name
  * @MODIFIED_RECORD
- * 	- TIME: 2026-04-01; AUTHOR: Modifier Name; DESC: Modification Description;
+ * 	- TIME: 2026-03-30; AUTHOR: Modifier Name; DESC: 动态表单的使用示例;
  */
 
 /*==================== 外部引入 ====================*/
-import * as Cesium from 'cesium';
-import { onMounted } from 'vue';
 
 /*==================== 内部引入 ====================*/
+import RENDERERFIELD_LIST from '@/assets/static/testRendererList';
+import DynamicForm from '@/common/components/DynamicForm/DynamicForm.vue';
+import { useHomeView } from './composables/useHomeView';
 
 /*==================== 类型定义 ====================*/
 
-/*==================== Props / Emits ==============*/
+/*==================== 常量定义 ====================*/
 
-/*==================== 响应式变量 / 常量 ===========*/
+/*==================== 组件Props ===================*/
 
-/*==================== Inject（依赖注入） ==========*/
+/*==================== Emits定义 ===================*/
 
-/*==================== 组合式函数 =================*/
+/*==================== 状态管理 ====================*/
+const { handleSubmitAsync } = useHomeView();
 
-/*==================== 计算属性 ===================*/
+/*==================== 监听器 ======================*/
 
-/*==================== 监听器 ====================*/
-
-/*==================== 生命周期 ===================*/
-onMounted(() => {
-	const view = new Cesium.Viewer('cesiumContainer', {
-		shouldAnimate: true,
-		animation: false,
-		timeline: false,
-		fullscreenButton: false,
-		geocoder: false,
-		homeButton: false,
-		sceneModePicker: false,
-		baseLayerPicker: false,
-		navigationHelpButton: false,
-	});
-
-	view.cesiumWidget.creditContainer.innerHTML = '';
-});
-
-/*==================== Provide（依赖提供） ====================*/
-
-/*==================== defineExpose ====================*/
+/*==================== 生命周期 ====================*/
 </script>
 
-<style scoped>
-#cesiumContainer {
-	width: 100vw;
-	height: 100vh;
-}
-</style>
+<style scoped></style>

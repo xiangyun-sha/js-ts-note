@@ -18,7 +18,7 @@
 import { computed } from 'vue';
 
 /*==================== 内部引入 ====================*/
-import { useFieldRenderer } from '../composables/useFieldRenerer';
+import { useFieldRenderer } from './composables/useFieldRenerer';
 
 /*==================== 类型定义 ====================*/
 

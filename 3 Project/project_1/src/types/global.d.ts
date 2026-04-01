@@ -1,7 +1,12 @@
+import type { Cesium3DTile, Viewer } from 'cesium';
 import type { FormItemRule } from 'element-plus';
 import type { Arrayable } from 'element-plus/es/utils';
 
 declare global {
+	interface Window {
+		_viewer: Viewer;
+	}
+
 	interface RendererField {
 		fieldName: string;
 		elType: string;
