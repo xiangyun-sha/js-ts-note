@@ -27,24 +27,35 @@ export function useStandardField<
 >(props: P): RenderFunction {
 	/* 解译属性与渲染字段 */
 	const { field, formData, onupdate, onchange } = props;
-	const { fieldName, elType, label } = field;
+	const { fieldName, elType, label, preset } = field;
 
-	/* update:modealValue 与 change 事件 */
+	/* onUpdate:modealValue 与 change 事件 */
 	const handleUpdate = (value: any) => onupdate(field, value);
 	const handleChange = (value: any) => onchange(field, value);
 
-	/* 其他事件 */
-	const buildEventHandlers = () => {
+	/**
+	 * 处理单独字段的自有事件
+	 * @returns { Record<string, (...args: any[]) => void> }
+	 */
+	function buildEventHandlers(): Record<string, (...args: any[]) => void> {
+		/* container */
 		const handlers: Record<string, (...args: any[]) => void> = {};
+
+		/* fiter & reconstruct */
 		if (field.events) {
 			Object.entries(field.events).forEach(([eventName, handler]) => {
+				/* deal event name，like "blur -> onBlur" */
 				const vueEventName = `on${eventName.charAt(0).toUpperCase()}${eventName.slice(1)}`;
+
+				/* reconstructor */
 				handlers[vueEventName] = (...args: any[]) =>
 					handler(field, ...args);
 			});
 		}
+
+		/* return res */
 		return handlers;
-	};
+	}
 
 	/* 返回的渲染逻辑 */
 	return () => {
@@ -92,11 +103,10 @@ export function useStandardField<
 			}
 
 			case 'select': {
-				const selectOptions = (field.preset?.options || []).map(
-					(opt: any) =>
-						typeof opt === 'object' && opt.label
-							? opt
-							: { label: String(opt), value: opt },
+				const selectOptions = (preset?.options || []).map((opt: any) =>
+					typeof opt === 'object' && opt.label
+						? opt
+						: { label: String(opt), value: opt },
 				);
 				return h(
 					ElSelect as any,
@@ -132,10 +142,10 @@ export function useStandardField<
 			case 'boolean':
 				return h(ElSwitch, {
 					modelValue: formData[fieldName] as boolean,
-					activeText: formData.preset?.activeText || '是',
-					inactiveText: formData.preset?.inactiveText || '否',
-					activeValue: formData.preset?.activeValue || true,
-					inactiveValue: formData.preset?.inactiveValue || false,
+					activeText: preset?.activeText || '是',
+					inactiveText: preset?.inactiveText || '否',
+					activeValue: preset?.activeValue || true,
+					inactiveValue: preset?.inactiveValue || false,
 					'onUpdate:modelValue': handleUpdate,
 					onChange: handleChange,
 					...eventHandlers,

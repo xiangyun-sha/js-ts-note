@@ -3,7 +3,6 @@
 		<div>
 			<DynamicForm
 				:field-list="RENDERERFIELD_LIST"
-				@change="handleUperChanged"
 				@submit="handleSubmitAsync"
 			/>
 		</div>
@@ -35,7 +34,7 @@ import { useHomeView } from './composables/useHomeView';
 /*==================== Emits定义 ===================*/
 
 /*==================== 状态管理 ====================*/
-const { handleSubmitAsync, handleUperChanged } = useHomeView();
+const { handleSubmitAsync } = useHomeView();
 
 /*==================== 监听器 ======================*/
 

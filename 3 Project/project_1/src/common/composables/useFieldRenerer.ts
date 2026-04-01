@@ -1,4 +1,5 @@
 import { useStandardField } from './useStandardField';
+import { useUploadField } from './useUploadField';
 
 /**
  * 字段渲染的组合式函数
@@ -33,9 +34,7 @@ export function useFieldRenderer<
 		case 'video':
 		case 'sounds':
 		case 'files':
-			composable = () => {
-				console.log('upload el');
-			};
+			composable = useUploadField;
 			break;
 
 		/* 常规类型 */
