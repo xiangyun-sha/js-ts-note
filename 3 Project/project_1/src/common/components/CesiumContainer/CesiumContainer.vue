@@ -31,14 +31,23 @@ const emits = defineEmits<{}>();
 /*==================== Inject（依赖注入） ==========*/
 
 /*==================== 组合式函数 =================*/
-const { initCesiumViewer } = useCesiumContainer(props, emits);
+const { cesiumContainerRef, initCesiumViewer } = useCesiumContainer(
+	props,
+	emits,
+);
 
 /*==================== 计算属性 ===================*/
 
 /*==================== 监听器 ====================*/
 
 /*==================== 生命周期 ===================*/
-onMounted(() => initCesiumViewer('cesiumContainer'));
+onMounted(() => {
+	console.log(cesiumContainerRef.value);
+
+	initCesiumViewer('cesiumContainer');
+
+	console.log(window._viewer);
+});
 
 /*==================== Provide（依赖提供） ====================*/
 

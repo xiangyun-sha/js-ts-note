@@ -1,9 +1,12 @@
 import * as Cesium from 'cesium';
+import { useTemplateRef } from 'vue';
 
 export function useCesiumContainer<P extends {}, E extends unknown>(
 	props: P,
 	emits: E,
 ) {
+	const cesiumContainerRef = useTemplateRef('cesiumContainerRef');
+
 	/**
 	 * 初始化 Cesium viewer
 	 * @param { string | El  } el
@@ -22,10 +25,10 @@ export function useCesiumContainer<P extends {}, E extends unknown>(
 			navigationHelpButton: false,
 		});
 
-		viewer.cesiumWidget.creditContainer.innerHTML = '';
+		viewer.creditDisplay.container.innerHTML = '';
 
 		window._viewer = viewer;
 	}
 
-	return { initCesiumViewer };
+	return { cesiumContainerRef, initCesiumViewer };
 }
