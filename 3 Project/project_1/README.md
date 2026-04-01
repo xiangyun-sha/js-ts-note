@@ -17,7 +17,9 @@ project_1
 ├─ package.json
 ├─ public
 │  ├─ favicon.ico
-│  └─ index.html
+│  ├─ index.html
+│  └─ static
+│     └─ system-setting.json
 ├─ src
 │  ├─ App.vue
 │  ├─ api
@@ -39,18 +41,25 @@ project_1
 │  │     └─ index.ts
 │  ├─ assets
 │  │  ├─ img
+│  │  ├─ static
+│  │  │  └─ testRendererList.ts
 │  │  └─ styles
 │  │     ├─ main.css
-│  │     └─ preset.css
+│  │     ├─ preset.css
+│  │     └─ reset.css
 │  ├─ common
 │  │  ├─ components
 │  │  │  ├─ DynamicForm.vue
 │  │  │  └─ FieldRenderer.vue
-│  │  └─ composables
-│  │     ├─ useFieldRenerer.ts
-│  │     ├─ useGeomField.ts
-│  │     ├─ useStandardField.ts
-│  │     └─ useUploadField.ts
+│  │  ├─ composables
+│  │  │  ├─ useDynamicForm.ts
+│  │  │  ├─ useFieldRenerer.ts
+│  │  │  ├─ useGeomField.ts
+│  │  │  ├─ useStandardField.ts
+│  │  │  └─ useUploadField.ts
+│  │  └─ utils
+│  │     ├─ class
+│  │     └─ fn
 │  ├─ main.ts
 │  ├─ router
 │  │  ├─ interceptor.ts
@@ -74,7 +83,10 @@ project_1
 │        ├─ HomeView.vue
 │        ├─ components
 │        └─ composables
+│           └─ useHomeView.ts
 ├─ tsconfig.json
+├─ uml
+│  └─ DynamicForm.plantuml
 └─ webpack.config.js
 
 ```

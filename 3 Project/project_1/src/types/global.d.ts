@@ -7,11 +7,14 @@ declare global {
 		elType: string;
 		label: string;
 		required: boolean;
-		rules?: FormItemRule | Arrayable<FormItemRule>; // 使用导入的类型
 		preset: {
 			options?: Array<any>;
 			defaultVal: any;
 			[key: string]: any;
+		};
+		rules?: FormItemRule | Arrayable<FormItemRule>; // 使用导入的类型
+		events?: {
+			[eventName: string]: (field: RendererField, ...args: any[]) => void;
 		};
 	}
 }

@@ -18,7 +18,7 @@ export function useFieldRenderer<
 			value: E,
 		) => void;
 	},
->(props: P) {
+>(props: P): { rendererFn: <P>(props: P) => void } {
 	/* 从父组件获取字段 */
 	const { field } = props;
 

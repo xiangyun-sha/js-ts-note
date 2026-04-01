@@ -7,6 +7,15 @@ const RENDERERFIELD_LIST: Array<RendererField> = [
 		preset: {
 			defaultVal: '',
 		},
+		events: {
+			blur: (field, event) => {
+				console.log(`${field.label} 失去焦点`, event);
+				// 可以在这里做实时校验等
+			},
+			focus: (field, event) => {
+				console.log('获得焦点');
+			},
+		},
 	},
 	{
 		fieldName: 'date',

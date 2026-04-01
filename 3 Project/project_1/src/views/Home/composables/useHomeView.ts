@@ -13,7 +13,16 @@ export function useHomeView() {
 		} catch (error) {}
 	}
 
+	/**
+	 *
+	 * @param formData
+	 */
+	function handleUperChanged(formData: Record<string, any>) {
+		console.log(formData);
+	}
+
 	return {
 		handleSubmitAsync,
+		handleUperChanged,
 	};
 }

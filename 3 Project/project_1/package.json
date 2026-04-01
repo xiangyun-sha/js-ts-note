@@ -58,6 +58,7 @@
     "cesium": "^1.138.0",
     "core-js": "^3.48.0",
     "element-plus": "^2.13.2",
+    "lodash": "^4.17.21",
     "pinia": "^3.0.4",
     "prettier": "^3.8.1",
     "reset-css": "^5.0.2",

@@ -1,4 +1,5 @@
 import { h } from 'vue';
+import type { RenderFunction } from 'vue';
 import {
 	ElInput,
 	ElInputNumber,
@@ -10,19 +11,45 @@ import {
 	ElDatePicker,
 } from 'element-plus';
 
-export function useStandardField(props: {
-	field: RendererField;
-	formData: Record<string, any>;
-	onupdate: (field: RendererField, value: any) => void;
-	onchange: (field: RendererField, value: any) => void;
-}) {
+export function useStandardField<
+	P extends {
+		field: RendererField;
+		formData: Record<string, any>;
+		onupdate: <R extends RendererField, E extends any>(
+			field: R,
+			value: E,
+		) => void;
+		onchange: <R extends RendererField, E extends any>(
+			field: R,
+			value: E,
+		) => void;
+	},
+>(props: P): RenderFunction {
+	/* 解译属性与渲染字段 */
 	const { field, formData, onupdate, onchange } = props;
 	const { fieldName, elType, label } = field;
 
+	/* update:modealValue 与 change 事件 */
 	const handleUpdate = (value: any) => onupdate(field, value);
 	const handleChange = (value: any) => onchange(field, value);
 
+	/* 其他事件 */
+	const buildEventHandlers = () => {
+		const handlers: Record<string, (...args: any[]) => void> = {};
+		if (field.events) {
+			Object.entries(field.events).forEach(([eventName, handler]) => {
+				const vueEventName = `on${eventName.charAt(0).toUpperCase()}${eventName.slice(1)}`;
+				handlers[vueEventName] = (...args: any[]) =>
+					handler(field, ...args);
+			});
+		}
+		return handlers;
+	};
+
+	/* 返回的渲染逻辑 */
 	return () => {
+		const eventHandlers = buildEventHandlers();
+
 		switch (elType) {
 			case 'number':
 				return h(ElInputNumber, {
@@ -30,6 +57,7 @@ export function useStandardField(props: {
 					modelValue: formData[fieldName] as number | null,
 					'onUpdate:modelValue': handleUpdate,
 					onChange: handleChange,
+					...eventHandlers,
 				});
 
 			case 'radiobox': {
@@ -50,6 +78,7 @@ export function useStandardField(props: {
 							| boolean,
 						'onUpdate:modelValue': handleUpdate,
 						onChange: handleChange,
+						...eventHandlers,
 					},
 					() =>
 						options.map((opt) =>
@@ -75,8 +104,9 @@ export function useStandardField(props: {
 						placeholder: `请选择${label}`,
 						modelValue: formData[fieldName],
 						'onUpdate:modelValue': handleUpdate,
-						onChange: handleChange,
 						style: 'width: 200px;',
+						onChange: handleChange,
+						...eventHandlers,
 					},
 					() =>
 						selectOptions.map((opt) =>
@@ -96,6 +126,7 @@ export function useStandardField(props: {
 					modelValue: formData[fieldName],
 					'onUpdate:modelValue': handleUpdate,
 					onChange: handleChange,
+					...eventHandlers,
 				});
 
 			case 'boolean':
@@ -107,6 +138,7 @@ export function useStandardField(props: {
 					inactiveValue: formData.preset?.inactiveValue || false,
 					'onUpdate:modelValue': handleUpdate,
 					onChange: handleChange,
+					...eventHandlers,
 				});
 
 			case 'input':
@@ -124,6 +156,7 @@ export function useStandardField(props: {
 					'onUpdate:modelValue': handleUpdate,
 					onChange: handleChange,
 					rows: field.preset.rows || 3,
+					...eventHandlers,
 				});
 
 			default:
@@ -131,6 +164,7 @@ export function useStandardField(props: {
 					modelValue: formData[fieldName],
 					'onUpdate:modelValue': handleUpdate,
 					onChange: handleChange,
+					...eventHandlers,
 				});
 		}
 	};

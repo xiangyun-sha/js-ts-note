@@ -1,0 +1,52 @@
+@startuml
+skinparam componentStyle rectangle
+skinparam backgroundColor #FEFEFE
+skinparam component {
+    BackgroundColor #F0F8FF
+    BorderColor #4682B4
+    FontColor #2F4F4F
+}
+skinparam arrow {
+    Color #4682B4
+    FontColor #2F4F4F
+}
+
+component "HomeView" as HomeView
+note right of HomeView : 使用 DynamicForm\n传递 :field-list\n监听 @submit
+
+component "DynamicForm" as DynamicForm
+note right of DynamicForm : Props:\n- fieldList: RendererField[]\n\n Emits:\n- change(value)\n- submit(value)\n- save-as-draft(value)\n\n 内部：\n- 使用 el-form\n- 循环 fieldList\n- 渲染 FieldRenderer
+
+component "FieldRenderer" as FieldRenderer
+note right of FieldRenderer : Props:\n- field: RendererField\n- formData: Record\n- onupdate(field, value)\n- onchange(field, value)\n\n 动态渲染字段组件
+
+' 组合式函数（非组件，但被使用）
+component "useHomeView" <<composable>> as useHomeView
+note right of useHomeView : 提供 handleSubmitAsync
+
+component "useDynamicForm" <<composable>> as useDynamicForm
+note right of useDynamicForm : 管理：\n- formDataRx\n- formRulesRx\n- formElRef\n\n 方法：\n- initialFormData\n- initialFormRules\n- handleFieldValueChanged\n- handleFieldValueUpdated\n- handleSubmit
+
+component "useFieldRenderer" <<composable>> as useFieldRenderer
+note right of useFieldRenderer : 根据 field 类型\n返回对应渲染组件\n（rendererFnComputed）
+
+' 关系：HomeView 使用 DynamicForm
+HomeView -down-> DynamicForm : <field-list>\n<@submit>
+HomeView ..> useHomeView : 使用
+
+' DynamicForm 使用 FieldRenderer
+DynamicForm -down-> FieldRenderer : 循环渲染，传递\n:field, :form-data,\n@update, @change
+
+' DynamicForm 使用 useDynamicForm
+DynamicForm ..> useDynamicForm : 使用
+
+' FieldRenderer 使用 useFieldRenderer
+FieldRenderer ..> useFieldRenderer : 使用
+
+' 依赖外部库（可选）
+DynamicForm -[dashed]-> "el-form" : 使用
+DynamicForm -[dashed]-> "el-form-item" : 使用
+DynamicForm -[dashed]-> "el-button" : 使用
+FieldRenderer -[dashed]-> "具体字段组件\n(如 el-input)" : 动态渲染
+
+@enduml

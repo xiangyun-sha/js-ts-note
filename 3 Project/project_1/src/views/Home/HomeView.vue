@@ -3,6 +3,7 @@
 		<div>
 			<DynamicForm
 				:field-list="RENDERERFIELD_LIST"
+				@change="handleUperChanged"
 				@submit="handleSubmitAsync"
 			/>
 		</div>
@@ -15,14 +16,14 @@
  * @DESCRIPTION Description here
  * @AUTHOR Your Name
  * @MODIFIED_RECORD
- * 	- TIME: 2026-03-30; AUTHOR: Modifier Name; DESC: Modification Description;
+ * 	- TIME: 2026-03-30; AUTHOR: Modifier Name; DESC: 动态表单的使用示例;
  */
 
 /*==================== 外部引入 ====================*/
 
 /*==================== 内部引入 ====================*/
-import DynamicForm from '@/common/components/DynamicForm.vue';
 import RENDERERFIELD_LIST from '@/assets/static/testRendererList';
+import DynamicForm from '@/common/components/DynamicForm.vue';
 import { useHomeView } from './composables/useHomeView';
 
 /*==================== 类型定义 ====================*/
@@ -34,7 +35,7 @@ import { useHomeView } from './composables/useHomeView';
 /*==================== Emits定义 ===================*/
 
 /*==================== 状态管理 ====================*/
-const { handleSubmitAsync } = useHomeView();
+const { handleSubmitAsync, handleUperChanged } = useHomeView();
 
 /*==================== 监听器 ======================*/
 

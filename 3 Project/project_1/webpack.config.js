@@ -23,7 +23,8 @@ module.exports = (env, argv) => {
 
 		/* 输出文件与结构 */
 		output: {
-			filename: 'js/[name].[contenthash:8].js',
+			// filename: 'js/[name].[contenthash:8].js',
+			filename: '[name].js',
 			path: path.resolve(__dirname, 'dist'),
 			clean: true,
 			publicPath: '/',

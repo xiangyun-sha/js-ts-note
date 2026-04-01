@@ -22,7 +22,6 @@
 				<el-button type="primary" @click="handleSubmit">
 					提交
 				</el-button>
-				<el-button type="primary"> 保存为草稿 </el-button>
 			</el-form-item>
 		</el-form>
 	</div>
@@ -56,6 +55,7 @@ const props = defineProps<{
 const emits = defineEmits<{
 	(e: 'change', value: any): void;
 	(e: 'submit', value: any): void;
+	(e: 'save-as-draft', value: any): void;
 }>();
 
 /*==================== 组合式函数 ==================*/
