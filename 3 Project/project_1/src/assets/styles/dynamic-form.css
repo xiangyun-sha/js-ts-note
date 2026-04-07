@@ -1,7 +1,7 @@
 #dynamic-form {
 	position: fixed;
 
-	width: calc(100vw - 300px);
+	width: calc(100vw - 60%);
 	height: 200px;
 
 	z-index: 999;
