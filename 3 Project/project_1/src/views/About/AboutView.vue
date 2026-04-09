@@ -22,7 +22,7 @@
 /*==================== 外部引入 ====================*/
 
 /*==================== 内部引入 ====================*/
-import RENDERERFIELD_LIST from '@/assets/static/testRendererList';
+import RENDERERFIELD_LIST from '@/config/testRendererList';
 import DynamicForm from '@/common/components/DynamicForm/DynamicForm.vue';
 import { useAboutView } from './composables/useAboutView';
 

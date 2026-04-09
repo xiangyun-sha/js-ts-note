@@ -34,13 +34,23 @@
 		"isolatedModules": true,
 		"noUncheckedSideEffectImports": true,
 		"moduleDetection": "force",
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"skipLibCheck": true,
-		"baseUrl": ".",
+		"rootDir": "./",
 		"paths": {
-			"@/*": ["src/*"]
+			"@/*": [
+				"./src/*"
+			]
 		}
 	},
-	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue", "src/**/*.tsx", "src/**/*.jsx"],
-	"exclude": ["node_modules"]
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.vue",
+		"src/**/*.tsx",
+		"src/**/*.jsx"
+	],
+	"exclude": [
+		"node_modules"
+	]
 }
