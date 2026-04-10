@@ -55,6 +55,7 @@ import { watch } from 'vue';
 /*==================== 内部引入 ====================*/
 import FieldRenderer from '../FieldRenderer/FieldRenderer.vue';
 import { useDyanmicForm } from './composables/useDynamicForm';
+import type { FieldRendererOptions } from '@/types/dynamic-form';
 
 /*==================== 类型定义 ====================*/
 
@@ -62,7 +63,7 @@ import { useDyanmicForm } from './composables/useDynamicForm';
 
 /*==================== Props / Emits ================*/
 const props = defineProps<{
-	fieldList: RendererField[];
+	fieldList: FieldRendererOptions[];
 }>();
 
 const emits = defineEmits<{
@@ -88,8 +89,8 @@ const {
 watch(
 	props.fieldList,
 	(
-		newList: Array<RendererField>,
-		oldList: Array<RendererField> | undefined,
+		newList: Array<FieldRendererOptions>,
+		oldList: Array<FieldRendererOptions> | undefined,
 	) => {
 		/* 重构 formData */
 		Object.keys(formDataRx).forEach((k) => delete formDataRx[k]);

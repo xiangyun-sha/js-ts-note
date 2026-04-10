@@ -19,6 +19,7 @@ import { computed } from 'vue';
 
 /*==================== 内部引入 ====================*/
 import { useFieldRenderer } from './composables/useFieldRenerer';
+import type { FieldRendererOptions } from '@/types/dynamic-form';
 
 /*==================== 类型定义 ====================*/
 
@@ -26,13 +27,13 @@ import { useFieldRenderer } from './composables/useFieldRenerer';
 
 /*==================== 组件Props ===================*/
 const props = defineProps<{
-	field: RendererField;
+	field: FieldRendererOptions;
 	formData: Record<string, any>;
-	onupdate: <P extends RendererField, E extends any>(
+	onupdate: <P extends FieldRendererOptions, E extends any>(
 		field: P,
 		value: E,
 	) => void;
-	onchange: <P extends RendererField, E extends any>(
+	onchange: <P extends FieldRendererOptions, E extends any>(
 		field: P,
 		value: E,
 	) => void;

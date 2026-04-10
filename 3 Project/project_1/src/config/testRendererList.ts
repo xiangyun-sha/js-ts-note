@@ -1,4 +1,6 @@
-const RENDERERFIELD_LIST: RendererField[] = [
+import type { FieldRendererOptions } from '@/types/dynamic-form';
+
+const FieldRendererOptions_LIST: FieldRendererOptions[] = [
 	// 1. 文本输入框
 	{
 		fieldName: 'username',
@@ -174,4 +176,4 @@ const RENDERERFIELD_LIST: RendererField[] = [
 	},
 ];
 
-export default RENDERERFIELD_LIST;
+export default FieldRendererOptions_LIST;

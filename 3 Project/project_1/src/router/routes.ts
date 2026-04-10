@@ -1,16 +1,24 @@
 import type { RouteRecordRaw } from 'vue-router';
 
-import HomeView from '@/views/Home/HomeView.vue';
+import Layout from '@/layout/Layout.vue';
 
 export const routes: RouteRecordRaw[] = [
 	{
 		path: '/',
-		name: 'Home',
-		component: HomeView,
-	},
-	{
-		path: '/about',
-		name: 'About',
-		component: () => import('@/views/About/AboutView.vue'),
+		name: 'Layout',
+		component: Layout,
+		redirect: '/home',
+		children: [
+			{
+				path: '/home',
+				name: 'Home',
+				component: () => import('@/views/Home/HomeView.vue'),
+			},
+			{
+				path: '/about',
+				name: 'About',
+				component: () => import('@/views/About/AboutView.vue'),
+			},
+		],
 	},
 ];

@@ -2,6 +2,7 @@
 import { h, ref, type RenderFunction } from 'vue';
 import { ElUpload, ElButton, ElIcon, ElDialog, ElMessage } from 'element-plus';
 import { Plus } from '@element-plus/icons-vue';
+import type { FieldRendererOptions } from '@/types/dynamic-form';
 
 /**
  * 上传字段渲染组合式函数
@@ -10,13 +11,13 @@ import { Plus } from '@element-plus/icons-vue';
  */
 export function useUploadField<
 	P extends {
-		field: RendererField;
+		field: FieldRendererOptions;
 		formData: Record<string, any>;
-		onupdate: <R extends RendererField, E extends any>(
+		onupdate: <R extends FieldRendererOptions, E extends any>(
 			field: R,
 			value: E,
 		) => void;
-		onchange: <R extends RendererField, E extends any>(
+		onchange: <R extends FieldRendererOptions, E extends any>(
 			field: R,
 			value: E,
 		) => void;

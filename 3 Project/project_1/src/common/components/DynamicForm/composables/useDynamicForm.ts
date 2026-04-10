@@ -1,8 +1,9 @@
 import { reactive, useTemplateRef } from 'vue';
 import type { FormInstance } from 'element-plus';
+import type { FieldRendererOptions } from '@/types/dynamic-form';
 
 export function useDyanmicForm<
-	P extends { fieldList: RendererField[] },
+	P extends { fieldList: FieldRendererOptions[] },
 	E extends {
 		(e: 'change', value: any): void;
 		(e: 'submit', value: any): void;
@@ -19,11 +20,11 @@ export function useDyanmicForm<
 
 	/**
 	 * 构建表单数据
-	 * @param { RendererField } fieldList
+	 * @param { FieldRendererOptions } fieldList
 	 * @returns { void }
 	 */
-	function initialFormData(fieldList: Array<RendererField>): void {
-		props.fieldList.forEach((field: RendererField) => {
+	function initialFormData(fieldList: Array<FieldRendererOptions>): void {
+		props.fieldList.forEach((field: FieldRendererOptions) => {
 			const { fieldName, preset } = field;
 			formDataRx[fieldName] = preset.defaultVal;
 		});
@@ -31,11 +32,11 @@ export function useDyanmicForm<
 
 	/**
 	 * 构建表单校验规则
-	 * @param { RendererField } fieldList
+	 * @param { FieldRendererOptions } fieldList
 	 * @returns { void }
 	 */
-	function initialFormRules(fieldList: Array<RendererField>): void {
-		props.fieldList.forEach((field: RendererField) => {
+	function initialFormRules(fieldList: Array<FieldRendererOptions>): void {
+		props.fieldList.forEach((field: FieldRendererOptions) => {
 			/* 解译 */
 			const { fieldName, required, rules, label } = field;
 
@@ -60,22 +61,22 @@ export function useDyanmicForm<
 
 	/**
 	 * 字段更新事件处理函数
-	 * @param { RendererField } field
+	 * @param { FieldRendererOptions } field
 	 * @param { any } value
 	 * @returns { void }
 	 */
-	function handleFieldValueUpdated(field: RendererField, value: any): void {
+	function handleFieldValueUpdated(field: FieldRendererOptions, value: any): void {
 		const { fieldName } = field;
 		formDataRx[fieldName] = value;
 	}
 
 	/**
 	 * 字段更改事件处理函数
-	 * @param { RendererField } field
+	 * @param { FieldRendererOptions } field
 	 * @param { any } value
 	 * @returns { void }
 	 */
-	function handleFieldValueChanged(field: RendererField, value: any): void {
+	function handleFieldValueChanged(field: FieldRendererOptions, value: any): void {
 		const { fieldName } = field;
 		emits('change', { name: fieldName });
 	}

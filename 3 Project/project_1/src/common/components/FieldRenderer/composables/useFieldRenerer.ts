@@ -1,5 +1,6 @@
 import { useStandardField } from './useStandardField';
 import { useUploadField } from './useUploadField';
+import type { FieldRendererOptions } from '@/types/dynamic-form';
 
 /**
  * 字段渲染的组合式函数
@@ -8,13 +9,13 @@ import { useUploadField } from './useUploadField';
  */
 export function useFieldRenderer<
 	P extends {
-		field: RendererField;
+		field: FieldRendererOptions;
 		formData: Record<string, any>;
-		onupdate: <R extends RendererField, E extends any>(
+		onupdate: <R extends FieldRendererOptions, E extends any>(
 			field: R,
 			value: E,
 		) => void;
-		onchange: <R extends RendererField, E extends any>(
+		onchange: <R extends FieldRendererOptions, E extends any>(
 			field: R,
 			value: E,
 		) => void;

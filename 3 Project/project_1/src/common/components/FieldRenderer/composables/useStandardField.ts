@@ -1,5 +1,4 @@
 import { h } from 'vue';
-import type { RenderFunction } from 'vue';
 import {
 	ElInput,
 	ElInputNumber,
@@ -11,15 +10,18 @@ import {
 	ElDatePicker,
 } from 'element-plus';
 
+import type { RenderFunction } from 'vue';
+import type { FieldRendererOptions } from '@/types/dynamic-form';
+
 export function useStandardField<
 	P extends {
-		field: RendererField;
+		field: FieldRendererOptions;
 		formData: Record<string, any>;
-		onupdate: <R extends RendererField, E extends any>(
+		onupdate: <R extends FieldRendererOptions, E extends any>(
 			field: R,
 			value: E,
 		) => void;
-		onchange: <R extends RendererField, E extends any>(
+		onchange: <R extends FieldRendererOptions, E extends any>(
 			field: R,
 			value: E,
 		) => void;

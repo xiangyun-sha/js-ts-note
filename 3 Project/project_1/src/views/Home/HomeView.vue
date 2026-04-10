@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<DynamicForm
-			:field-list="RENDERERFIELD_LIST"
+			:field-list="FieldRendererOptions_LIST"
 			@submit="handleSubmitAsync"
 		/>
 	</div>
@@ -19,7 +19,7 @@
 /*==================== 外部引入 ====================*/
 
 /*==================== 内部引入 ====================*/
-import RENDERERFIELD_LIST from '@/config/testRendererList';
+import FieldRendererOptions_LIST from '@/config/testRendererList';
 import DynamicForm from '@/common/components/DynamicForm/DynamicForm.vue';
 import { useHomeView } from './composables/useHomeView';
 

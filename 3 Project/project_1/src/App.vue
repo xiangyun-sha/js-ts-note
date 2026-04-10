@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<RouterView />
-		<CesiumContainer />
 	</div>
 </template>
 
@@ -17,7 +16,6 @@
 /*==================== 外部引入 ====================*/
 
 /*==================== 内部引入 ====================*/
-import CesiumContainer from './common/components/CesiumContainer/CesiumContainer.vue';
 
 /*==================== 类型定义 ====================*/
 
