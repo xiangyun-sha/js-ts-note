@@ -1,13 +1,11 @@
 #
 
-```bash
+
+```
 project_1
-├─ .husky
-│  └─ pre-commit
 ├─ .prettierrc
 ├─ README.md
 ├─ babel.config.json
-├─ cypress.config.js
 ├─ dockerfile
 ├─ eslint.config.js
 ├─ jenkinsfile
@@ -25,11 +23,11 @@ project_1
 │  ├─ api
 │  │  ├─ http
 │  │  │  ├─ clients
-│  │  │  │  ├─ gis.ts
-│  │  │  │  └─ user.ts
+│  │  │  │  ├─ gisInstance.ts
+│  │  │  │  └─ userInstance.ts
 │  │  │  ├─ services
-│  │  │  │  ├─ gis.ts
-│  │  │  │  └─ user.ts
+│  │  │  │  ├─ gisServices.ts
+│  │  │  │  └─ userServices.ts
 │  │  │  ├─ types
 │  │  │  │  ├─ gis.ts
 │  │  │  │  └─ user.ts
@@ -40,26 +38,47 @@ project_1
 │  │  └─ ws
 │  │     └─ index.ts
 │  ├─ assets
-│  │  ├─ img
-│  │  ├─ static
-│  │  │  └─ testRendererList.ts
+│  │  ├─ imgs
 │  │  └─ styles
+│  │     ├─ ceisum-container.css
+│  │     ├─ dynamic-form.css
 │  │     ├─ main.css
 │  │     ├─ preset.css
 │  │     └─ reset.css
 │  ├─ common
 │  │  ├─ components
-│  │  │  ├─ DynamicForm.vue
-│  │  │  └─ FieldRenderer.vue
+│  │  │  ├─ CesiumContainer
+│  │  │  │  ├─ CesiumContainer.vue
+│  │  │  │  └─ composables
+│  │  │  │     └─ useCesiumContainer.ts
+│  │  │  ├─ DynamicForm
+│  │  │  │  ├─ DynamicForm.vue
+│  │  │  │  └─ composables
+│  │  │  │     └─ useDynamicForm.ts
+│  │  │  └─ FieldRenderer
+│  │  │     ├─ FieldRenderer.vue
+│  │  │     └─ composables
+│  │  │        ├─ useFieldRenerer.ts
+│  │  │        ├─ useGeomField.ts
+│  │  │        ├─ useStandardField.ts
+│  │  │        └─ useUploadField.ts
 │  │  ├─ composables
-│  │  │  ├─ useDynamicForm.ts
-│  │  │  ├─ useFieldRenerer.ts
-│  │  │  ├─ useGeomField.ts
-│  │  │  ├─ useStandardField.ts
-│  │  │  └─ useUploadField.ts
 │  │  └─ utils
 │  │     ├─ class
-│  │     └─ fn
+│  │     │  └─ FooClass.ts
+│  │     └─ function
+│  │        └─ fooFn.ts
+│  ├─ config
+│  │  └─ testRendererList.ts
+│  ├─ layout
+│  │  ├─ AdminLayout
+│  │  └─ DefaultLayout
+│  │     ├─ Aside
+│  │     ├─ Footer
+│  │     ├─ Header
+│  │     ├─ Layout.vue
+│  │     └─ Main
+│  │        └─ MainLayout.vue
 │  ├─ main.ts
 │  ├─ router
 │  │  ├─ interceptor.ts
@@ -70,6 +89,7 @@ project_1
 │  ├─ types
 │  │  ├─ auto-imports.d.ts
 │  │  ├─ components.d.ts
+│  │  ├─ dynamic-form.d.ts
 │  │  ├─ env.d.ts
 │  │  ├─ global.d.ts
 │  │  ├─ shims-css.d.ts
@@ -77,11 +97,10 @@ project_1
 │  └─ views
 │     ├─ About
 │     │  ├─ AboutView.vue
-│     │  ├─ components
 │     │  └─ composables
+│     │     └─ useAboutView.ts
 │     └─ Home
 │        ├─ HomeView.vue
-│        ├─ components
 │        └─ composables
 │           └─ useHomeView.ts
 ├─ tsconfig.json

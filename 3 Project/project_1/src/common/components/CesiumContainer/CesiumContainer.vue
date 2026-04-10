@@ -55,8 +55,5 @@ onMounted(() => {
 </script>
 
 <style scoped>
-#cesiumContainer {
-	width: 100vw;
-	height: 100vh;
-}
+@import '@/assets/styles/cesium-container.css';
 </style>

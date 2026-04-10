@@ -18,7 +18,7 @@
 import { computed } from 'vue';
 
 /*==================== 内部引入 ====================*/
-import { useFieldRenderer } from './composables/useFieldRenerer';
+import { useFieldRenderer } from './composables/useFieldRenderer';
 import type { FieldRendererOptions } from '@/types/dynamic-form';
 
 /*==================== 类型定义 ====================*/
