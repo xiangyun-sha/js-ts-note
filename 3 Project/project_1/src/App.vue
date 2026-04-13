@@ -14,6 +14,7 @@
  */
 
 /*==================== 外部引入 ====================*/
+import { RouterView } from 'vue-router';
 
 /*==================== 内部引入 ====================*/
 
@@ -38,8 +39,6 @@ const emits = defineEmits<{}>();
 /*==================== Provide（依赖提供） ==========*/
 
 /*==================== defineExpose ================*/
-
-import { RouterView } from 'vue-router';
 </script>
 
 <style scoped></style>
