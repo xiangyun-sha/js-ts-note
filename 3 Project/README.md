@@ -7,7 +7,3 @@
 ## project_2
 
 - Backend_Demo
-
-## project_3
-
-- Self Blog

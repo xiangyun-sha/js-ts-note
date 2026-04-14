@@ -571,3 +571,200 @@ JavaScript 全栈知识体系
       ├─ 架构师
       └─ 技术专家
 ```
+
+```
+js-ts-note
+├─ 1 Theory
+│  ├─ Part.1 基本语法
+│  │  ├─ Chr.1 数据定义与操作
+│  │  │  ├─ Section.1 基本环境.md
+│  │  │  ├─ Section.2 注释.md
+│  │  │  ├─ Section.3 变量与命名规则.md
+│  │  │  ├─ Section.4 操作符与表达式.md
+│  │  │  ├─ Section.5 语句与流程控制.md
+│  │  │  ├─ Section.6 基本输入输出.md
+│  │  │  └─ Section.7 基本调试.md
+│  │  ├─ Chr.2 结构化编程
+│  │  │  ├─ Section.1 函数.md
+│  │  │  ├─ Section.2 数据结构.md
+│  │  │  └─ Section.3 模块化.md
+│  │  └─ Chr.3 编程范式
+│  │     ├─ Part.1 面向对象
+│  │     │  ├─ Section.0 面向过程.md
+│  │     │  ├─ Section.1 类与对象.md
+│  │     │  ├─ Section.2 封装.md
+│  │     │  ├─ Section.3 原型连与继承.md
+│  │     │  ├─ Section.4 抽象.md
+│  │     │  ├─ Section.5 多态.md
+│  │     │  ├─ Section.6 泛型[*].md
+│  │     │  ├─ Section.7 设计模式[*].md
+│  │     │  └─ Section.8 拓展[*].md
+│  │     ├─ Part.2 函数式
+│  │     └─ Part.3 元编程
+│  ├─ Part.2 类型系统
+│  │  └─ Section.0 TypeScrip.md
+│  ├─ Part.3 标准库
+│  │  ├─ Chr.1 核心内置对象
+│  │  │  ├─ Section.1 Object.md
+│  │  │  ├─ Section.2 Function.md
+│  │  │  ├─ Section.3 String.md
+│  │  │  └─ Section.4 Number.md
+│  │  ├─ Chr.2 集合类
+│  │  │  ├─ Section.1 Array.md
+│  │  │  ├─ Section.2 TypedArray.md
+│  │  │  ├─ Section.3 Map.md
+│  │  │  ├─ Section.4 Set.md
+│  │  │  └─ Section.5 WeakMap & WeakSet.md
+│  │  ├─ Chr.4 正则
+│  │  │  └─ Section.1 RegExp.md
+│  │  └─ Chr.5 异步
+│  │     ├─ Section.1 EventQueue & EventLoop.md
+│  │     ├─ Section.2 Callback & Promise.md
+│  │     ├─ Section.3 async & await.md
+│  │     └─ Section.4 async loop & async iteration.md
+│  ├─ Part.4 生态
+│  │  ├─ Chr.1 浏览器端
+│  │  │  ├─ Section.1 DOM
+│  │  │  │  ├─ 1.1 DOM树与节点类型.md
+│  │  │  │  ├─ 1.2 节点操作.md
+│  │  │  │  ├─ 1.3 事件系统.md
+│  │  │  │  ├─ 1.4 表单与控件.md
+│  │  │  │  └─ 1.5 动态脚本与样式[*].md
+│  │  │  └─ Section.2 BOM
+│  │  │     ├─ 2.1 .window 对象.md
+│  │  │     ├─ 2.2 Location & History.md
+│  │  │     ├─ 2.3 Navigator 与用户代理[*].md
+│  │  │     ├─ 2.4 Screen 对象[*].md
+│  │  │     ├─ 2.5 定时器.md
+│  │  │     └─ 2.6 全局对象与全局函数.md
+│  │  └─ Chr.2 服务器端
+│  └─ README.md
+├─ 2 Demo
+│  ├─ Theme.1 数据定义与操作
+│  └─ Theme.2 函数
+├─ 3 Project
+│  ├─ README.md
+│  ├─ project_1
+│  │  ├─ .prettierrc
+│  │  ├─ README.md
+│  │  ├─ babel.config.json
+│  │  ├─ dockerfile
+│  │  ├─ eslint.config.js
+│  │  ├─ jenkinsfile
+│  │  ├─ jest.config.js
+│  │  ├─ nginx.conf
+│  │  ├─ package-lock.json
+│  │  ├─ package.json
+│  │  ├─ public
+│  │  │  ├─ favicon.ico
+│  │  │  └─ index.html
+│  │  ├─ src
+│  │  │  ├─ App.vue
+│  │  │  ├─ api
+│  │  │  │  ├─ http
+│  │  │  │  │  ├─ clients
+│  │  │  │  │  │  ├─ gisInstance.ts
+│  │  │  │  │  │  └─ userInstance.ts
+│  │  │  │  │  ├─ services
+│  │  │  │  │  │  ├─ gisServices.ts
+│  │  │  │  │  │  └─ userServices.ts
+│  │  │  │  │  ├─ types
+│  │  │  │  │  │  ├─ gis.ts
+│  │  │  │  │  │  └─ user.ts
+│  │  │  │  │  └─ utils
+│  │  │  │  │     ├─ auth.ts
+│  │  │  │  │     └─ interceptors.ts
+│  │  │  │  ├─ index.ts
+│  │  │  │  └─ ws
+│  │  │  │     └─ index.ts
+│  │  │  ├─ assets
+│  │  │  │  ├─ imgs
+│  │  │  │  └─ styles
+│  │  │  │     ├─ cesium-container.css
+│  │  │  │     ├─ dynamic-form.css
+│  │  │  │     ├─ main.css
+│  │  │  │     ├─ preset.css
+│  │  │  │     └─ reset.css
+│  │  │  ├─ common
+│  │  │  │  ├─ components
+│  │  │  │  │  ├─ CesiumContainer
+│  │  │  │  │  │  ├─ CesiumContainer.vue
+│  │  │  │  │  │  └─ composables
+│  │  │  │  │  │     └─ useCesiumContainer.ts
+│  │  │  │  │  ├─ DynamicForm
+│  │  │  │  │  │  ├─ DynamicForm.vue
+│  │  │  │  │  │  └─ composables
+│  │  │  │  │  │     └─ useDynamicForm.ts
+│  │  │  │  │  └─ FieldRenderer
+│  │  │  │  │     ├─ FieldRenderer.vue
+│  │  │  │  │     └─ composables
+│  │  │  │  │        ├─ useFieldRenderer.ts
+│  │  │  │  │        ├─ useGeomField.ts
+│  │  │  │  │        ├─ useStandardField.ts
+│  │  │  │  │        └─ useUploadField.ts
+│  │  │  │  ├─ composables
+│  │  │  │  └─ utils
+│  │  │  ├─ config
+│  │  │  │  ├─ systemConfig.ts
+│  │  │  │  └─ testRendererList.ts
+│  │  │  ├─ layout
+│  │  │  │  ├─ AdminLayout
+│  │  │  │  │  └─ AdminLayout.vue
+│  │  │  │  └─ DefaultLayout
+│  │  │  │     ├─ Aside
+│  │  │  │     ├─ DefaultLayout.vue
+│  │  │  │     ├─ Footer
+│  │  │  │     ├─ Header
+│  │  │  │     └─ Main
+│  │  │  │        └─ MainLayout.vue
+│  │  │  ├─ main.ts
+│  │  │  ├─ router
+│  │  │  │  ├─ interceptor.ts
+│  │  │  │  ├─ router.ts
+│  │  │  │  └─ routes.ts
+│  │  │  ├─ stores
+│  │  │  │  ├─ counterStore.ts
+│  │  │  │  ├─ gisStore.ts
+│  │  │  │  └─ userStore.ts
+│  │  │  ├─ types
+│  │  │  │  ├─ auto-imports.d.ts
+│  │  │  │  ├─ components.d.ts
+│  │  │  │  ├─ dynamic-form.d.ts
+│  │  │  │  ├─ env.d.ts
+│  │  │  │  ├─ global.d.ts
+│  │  │  │  ├─ shims-css.d.ts
+│  │  │  │  └─ shims-vue.d.ts
+│  │  │  └─ views
+│  │  │     ├─ About
+│  │  │     │  ├─ AboutView.vue
+│  │  │     │  └─ composables
+│  │  │     │     └─ useAboutView.ts
+│  │  │     └─ Home
+│  │  │        ├─ HomeView.vue
+│  │  │        └─ composables
+│  │  │           └─ useHomeView.ts
+│  │  ├─ tsconfig.json
+│  │  ├─ uml
+│  │  │  └─ DynamicForm.plantuml
+│  │  └─ webpack.config.js
+│  └─ project_2
+│     ├─ app.ts
+│     ├─ package.json
+│     ├─ pnpm-lock.yaml
+│     ├─ tsconfig.json
+│     └─ webpack.config.js
+├─ 4 Temp
+│  ├─ Temp.1 文档化注释 与 代码即文档.md
+│  ├─ Temp.10 .md
+│  ├─ Temp.2 组合优于继承.md
+│  ├─ Temp.3 明确是什么阻塞了主线程.md
+│  ├─ Temp.4 阻塞类型.md
+│  ├─ Temp.5 链式编程.md
+│  ├─ Temp.6 vDOm 和 vNode.md
+│  ├─ Temp.7 事件函数与事件处理函数及其最佳实践.md
+│  ├─ Temp.8 DOM Event & EventEmitter.md
+│  ├─ Temp.9 .md
+│  └─ Temp11 去重.md
+└─ README.md
+
+```
