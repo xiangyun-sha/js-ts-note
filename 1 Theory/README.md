@@ -358,16 +358,16 @@ js-ts-note
 ```bash
 Module.2 标准库
 ├─ Part.0 核心内置对象
-│  ├─ Section.1 Object
-│  ├─ Section.2 Function
-│  ├─ Section.3 String
-│  ├─ Section.4 Number
-│  ├─ Section.5 Boolean
-│  ├─ Section.6 Symbol
-│  ├─ Section.7 BigInt
-│  ├─ Section.8 Error
-│  ├─ Section.9 Math
-│  └─ Section.10 JSON
+│  ├─ Section.1 Boolean
+│  ├─ Section.2 Number
+│  ├─ Section.3 BigInt
+│  ├─ Section.4 Math
+│  ├─ Section.5 String
+│  ├─ Section.6 Function
+│  ├─ Section.7 Symbol
+│  ├─ Section.8 Object
+│  └─ Section.9 JSON
+│  ├─ Section.10 Error
 ├─ Part.1 集合类
 │  ├─ Section.1 Array
 │  ├─ Section.2 Map
