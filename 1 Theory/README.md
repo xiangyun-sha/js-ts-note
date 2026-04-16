@@ -457,3 +457,30 @@ Module.4 生态系统
 │  └─ Section.8 性能与调试（原 Section.6）
 
 ```
+
+
+```bash
+Part.3 类型系统
+├─ Section.1 基础类型
+│  ├─ 1.1 原始类型（string, number, boolean）.md
+│  ├─ 1.2 空与未定义类型（null, undefined, void）.md
+│  └─ 1.3 字面量类型与联合类型.md
+├─ Section.2 复合类型
+│  ├─ 2.1 数组与元组.md
+│  ├─ 2.2 枚举类型（enum）.md
+│  ├─ 2.3 对象类型与类型别名.md
+│  └─ 2.4 接口（interface）.md
+├─ Section.3 高级类型
+│  ├─ 3.1 泛型（generics）.md
+│  ├─ 3.2 可迭代类型（Iterable, Iterator）.md
+│  ├─ 3.3 映射类型与条件类型.md
+│  └─ 3.4 类型守卫与类型断言.md
+├─ Section.4 类型系统机制
+│  ├─ 4.1 类型推断.md
+│  ├─ 4.2 类型兼容性（结构类型）.md
+│  └─ 4.3 模块与类型声明.md
+└─ Section.5 实用工具类型
+   ├─ 5.1 Partial, Required, Readonly.md
+   ├─ 5.2 Pick, Omit, Record.md
+   └─ 5.3 ReturnType, Parameters 等.md
+```
