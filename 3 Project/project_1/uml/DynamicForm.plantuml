@@ -1,4 +1,6 @@
-@startuml
+@startuml 动态表单
+title 动态表单组件图
+
 skinparam componentStyle rectangle
 skinparam backgroundColor #FEFEFE
 skinparam component {

@@ -30,7 +30,7 @@ module.exports = (env, argv) => {
 			publicPath: '/',
 		},
 
-		/* 解译 */
+		/* 编译 */
 		resolve: {
 			extensions: ['.js', '.ts', '.tsx', '.json', '.vue'],
 			alias: {
