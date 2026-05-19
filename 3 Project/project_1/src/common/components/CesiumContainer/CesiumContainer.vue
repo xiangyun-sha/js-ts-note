@@ -41,10 +41,10 @@ const { cesiumContainerRef, initCesiumViewer } = useCesiumContainer(
 /*==================== 监听器 ====================*/
 
 /*==================== 生命周期 ===================*/
-onMounted(() => {
+onMounted(async () => {
 	console.log(cesiumContainerRef.value);
 
-	initCesiumViewer('cesiumContainer');
+	await initCesiumViewer('cesiumContainer');
 
 	console.log(window._viewer);
 });

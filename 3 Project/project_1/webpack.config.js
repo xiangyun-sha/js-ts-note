@@ -112,7 +112,7 @@ module.exports = (env, argv) => {
 		/* 服务器 */
 		devServer: {
 			static: path.join(__dirname, 'dist'),
-			port: 8080,
+			port: 3000,
 			hot: true,
 			open: true,
 			historyApiFallback: true,
