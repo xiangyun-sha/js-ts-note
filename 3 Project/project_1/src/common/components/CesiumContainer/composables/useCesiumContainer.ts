@@ -28,14 +28,8 @@ export function useCesiumContainer<P extends {}, E extends unknown>(
 			navigationHelpButton: false,
 		});
 
-		const terrainProvider = await Cesium.CesiumTerrainProvider.fromUrl(
-			'http://172.3.3.181:8094/resources/dem/',
-		);
-
-		viewer.scene.terrainProvider = terrainProvider;
 
 		viewer.creditDisplay.container.innerHTML = '';
-
 		window._viewer = viewer;
 	}
 
