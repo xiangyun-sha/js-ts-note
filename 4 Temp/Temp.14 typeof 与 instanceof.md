@@ -7,7 +7,7 @@
 `typeof` 是一个**运算符**，返回一个表示值类型的字符串。它主要用于**基本类型**（`string`、`number`、`boolean`、`symbol`、`bigint`、`undefined`、`function`、`object`）。
 
 ```typescript
-let str = "hello";
+let str = 'hello';
 let num = 42;
 let bool = true;
 let fn = () => {};
@@ -16,13 +16,13 @@ let arr = [];
 let nul = null;
 let undef = undefined;
 
-console.log(typeof str);   // "string"
-console.log(typeof num);   // "number"
-console.log(typeof bool);  // "boolean"
-console.log(typeof fn);    // "function"
-console.log(typeof obj);   // "object"
-console.log(typeof arr);   // "object"  （注意：数组也是 "object"）
-console.log(typeof nul);   // "object"  （历史遗留 bug）
+console.log(typeof str); // "string"
+console.log(typeof num); // "number"
+console.log(typeof bool); // "boolean"
+console.log(typeof fn); // "function"
+console.log(typeof obj); // "object"
+console.log(typeof arr); // "object"  （注意：数组也是 "object"）
+console.log(typeof nul); // "object"  （历史遗留 bug）
 console.log(typeof undef); // "undefined"
 ```
 
@@ -30,13 +30,13 @@ console.log(typeof undef); // "undefined"
 
 ```typescript
 function print(value: string | number) {
-  if (typeof value === "string") {
-    // 此处 TypeScript 知道 value 是 string
-    console.log(value.toUpperCase());
-  } else {
-    // 此处 TypeScript 知道 value 是 number
-    console.log(value.toFixed(2));
-  }
+	if (typeof value === 'string') {
+		// 此处 TypeScript 知道 value 是 string
+		console.log(value.toUpperCase());
+	} else {
+		// 此处 TypeScript 知道 value 是 number
+		console.log(value.toFixed(2));
+	}
 }
 ```
 
@@ -54,11 +54,11 @@ let dog = new Dog();
 let arr = [];
 let date = new Date();
 
-console.log(dog instanceof Dog);     // true
-console.log(dog instanceof Animal);  // true
-console.log(arr instanceof Array);   // true
-console.log(arr instanceof Object);  // true
-console.log(date instanceof Date);   // true
+console.log(dog instanceof Dog); // true
+console.log(dog instanceof Animal); // true
+console.log(arr instanceof Array); // true
+console.log(arr instanceof Object); // true
+console.log(date instanceof Date); // true
 console.log(date instanceof Object); // true
 ```
 
@@ -66,13 +66,13 @@ console.log(date instanceof Object); // true
 
 ```typescript
 function handle(value: Date | string) {
-  if (value instanceof Date) {
-    // 此处 TypeScript 知道 value 是 Date
-    console.log(value.getTime());
-  } else {
-    // 此处是 string
-    console.log(value.toUpperCase());
-  }
+	if (value instanceof Date) {
+		// 此处 TypeScript 知道 value 是 Date
+		console.log(value.getTime());
+	} else {
+		// 此处是 string
+		console.log(value.toUpperCase());
+	}
 }
 ```
 
@@ -93,10 +93,12 @@ function handle(value: Date | string) {
 ## 4. 常见陷阱与补充
 
 - **`typeof null` 是 `"object"`** —— 需单独处理：
-  
-  ```typescript
-  if (value === null) { /* ... */ }
-  ```
+
+    ```typescript
+    if (value === null) {
+    	/* ... */
+    }
+    ```
 
 - **`instanceof` 跨 iframe / 不同全局对象时可能失效**，因为每个全局环境有独立的构造函数。
 
@@ -104,10 +106,10 @@ function handle(value: Date | string) {
 
 - **TypeScript 中可以使用 `typeof` 获取类型**（类型上下文）：
 
-  ```typescript
-  let person = { name: "Alice", age: 30 };
-  type Person = typeof person;  // 提取 person 的类型
-  ```
+    ```typescript
+    let person = { name: 'Alice', age: 30 };
+    type Person = typeof person; // 提取 person 的类型
+    ```
 
 ## 5. 总结
 
